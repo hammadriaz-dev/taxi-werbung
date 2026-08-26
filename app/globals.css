@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-charcoal font-body antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-display;
+  }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid theme("colors.amber");
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Signature element: continuous route marquee */
+.route-track {
+  animation: route-scroll 28s linear infinite;
+}
+.route-track:hover {
+  animation-play-state: paused;
+}
+@keyframes route-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Dotted route line used in hero */
+.route-dots {
+  background-image: radial-gradient(circle, theme("colors.ink") 1.5px, transparent 1.5px);
+  background-size: 14px 2px;
+  background-repeat: repeat-x;
+  background-position: center;
+}
