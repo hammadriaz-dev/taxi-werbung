@@ -85,7 +85,9 @@ export default function FebrezeStudyPage({ params }: { params: { locale: string 
               {s.basicsHeading}
             </p>
             <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-3">
-              {s.basicsItems.map((item) => (
+              {s.basicsItems
+                .filter((item) => !item.value.includes("BITTE ERGÄNZEN") && !item.value.includes("PLEASE PROVIDE"))
+                .map((item) => (
                 <div key={item.label}>
                   <dt className="text-[11px] uppercase tracking-[0.06em] text-charcoal/50">
                     {item.label}

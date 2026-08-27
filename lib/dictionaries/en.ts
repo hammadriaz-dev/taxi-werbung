@@ -72,9 +72,7 @@ const en: Dictionary = {
       basicsHeading: "Campaign Basics",
       basicsItems: [
         { label: "Campaign duration", value: "3 months (summer 1999)" },
-        { label: "Number of taxis", value: "[PLEASE PROVIDE]" },
         { label: "Market region", value: "9 major German cities (4 test, 5 control cities)" },
-        { label: "Sample size", value: "[PLEASE PROVIDE]" },
       ],
       lockedBullets: [
         "All original study metrics (up to 79% higher trial purchases)",

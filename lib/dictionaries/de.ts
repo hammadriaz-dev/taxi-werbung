@@ -19,7 +19,7 @@ const de = {
   },
   nav: {
     home: "Home",
-    about: "Über Uns",
+    about: "Über uns",
     contact: "Kontakt",
     cta: "Angebot anfordern",
   },
@@ -70,9 +70,7 @@ const de = {
       basicsHeading: "Eckdaten der Kampagne",
       basicsItems: [
         { label: "Kampagnendauer", value: "3 Monate (Sommer 1999)" },
-        { label: "Anzahl Taxis", value: "[BITTE ERGÄNZEN]" },
         { label: "Marktregion", value: "9 deutsche Großstädte (4 Test-, 5 Kontrollstädte)" },
-        { label: "Stichprobe", value: "[BITTE ERGÄNZEN]" },
       ],
       lockedBullets: [
         "Alle Original-Kennzahlen der Studie (bis zu 79 % höhere Testkäufe)",
