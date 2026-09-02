@@ -31,7 +31,6 @@ const en: Dictionary = {
     subtitle:
       "Taxi side-door advertising for companies, brands and international campaigns — visible on the streets of German cities.",
     ctaPrimary: "Get Your Free Quote",
-    ctaSecondary: "Go to Contact Form",
     trustLine: "Consulting · Planning · Design · Execution",
   },
   studyReports: {
