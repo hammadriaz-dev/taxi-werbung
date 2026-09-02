@@ -62,16 +62,10 @@ export default function HomePage({ params }: { params: { locale: string } }) {
 
           <div className="mt-9 flex flex-wrap gap-4">
             <a
-              href="mailto:info@taxi-werbung.org"
+              href="#contact-form"
               className="inline-flex items-center rounded-md sm:rounded-full bg-amber px-8 py-4 font-semibold text-ink hover:bg-amberDark transition-colors"
             >
               {dict.hero.ctaPrimary}
-            </a>
-            <a
-              href="#contact-form"
-              className="inline-flex items-center rounded-md sm:rounded-full border border-cream/30 px-8 py-4 font-semibold text-cream hover:border-cream/60 transition-colors"
-            >
-              {dict.hero.ctaSecondary}
             </a>
           </div>
 

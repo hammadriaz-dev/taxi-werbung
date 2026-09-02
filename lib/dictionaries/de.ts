@@ -29,7 +29,7 @@ const de = {
     subtitle:
       "Werbung auf der Taxi-Seitentür für Unternehmen, Marken und internationale Kampagnen – sichtbar auf den Straßen deutscher Städte.",
     ctaPrimary: "Kostenloses Angebot anfordern",
-    ctaSecondary: "Zum Kontaktformular",
+    // ctaSecondary: "Zum Kontaktformular",
     trustLine: "Beratung · Planung · Gestaltung · Umsetzung",
   },
   studyReports: {
