@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import type { Dictionary } from "@/lib/dictionaries/de";
 
 type Status = "idle" | "sending" | "success" | "error";
@@ -40,12 +41,16 @@ export default function LeadForm({ dict, locale }: { dict: Dictionary; locale: s
 
   if (status === "success") {
     return (
-      <div className="rounded-3xl bg-white p-10 text-center shadow-xl shadow-black/20">
-        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-amber/15 text-2xl">
+      <div
+        role="status"
+        aria-live="polite"
+        className="rounded-3xl bg-white p-10 text-center shadow-xl shadow-black/20"
+      >
+        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-amber text-3xl text-ink">
           ✓
         </div>
-        <p className="mt-4 font-display text-2xl font-bold text-ink">{f.successTitle}</p>
-        <p className="mt-2 text-charcoal/70">{f.successBody}</p>
+        <p className="mt-5 font-display text-2xl md:text-3xl font-bold text-ink">{f.successTitle}</p>
+        <p className="mt-3 text-base text-charcoal/75 leading-relaxed">{f.successBody}</p>
       </div>
     );
   }
@@ -74,6 +79,26 @@ export default function LeadForm({ dict, locale }: { dict: Dictionary; locale: s
           {f.errorBody}
         </p>
       )}
+
+      <label className="flex items-start gap-2.5 text-xs text-charcoal/70 leading-relaxed">
+        <input
+          type="checkbox"
+          name="consent"
+          required
+          className="mt-0.5 h-4 w-4 shrink-0 rounded border-line text-amber focus:ring-amber/40"
+        />
+        <span>
+          {f.consentPrefix}
+          <Link
+            href={`/${locale}/privacy`}
+            target="_blank"
+            className="underline underline-offset-2 hover:text-ink"
+          >
+            {f.consentLinkText}
+          </Link>
+          {f.consentSuffix}
+        </span>
+      </label>
 
       <button
         type="submit"

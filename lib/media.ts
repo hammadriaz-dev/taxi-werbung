@@ -14,7 +14,7 @@ export const media = {
     "https://taxi-werbung.org/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-03-at-1.07.34-AM-778x1024.jpeg",
   ],
   aboutHero: "https://taxi-werbung.org/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-03-at-1.09.38-AM-768x576.jpeg",
-  contactHero: "https://taxi-werbung.org/wp-content/uploads/2024/02/hot-line-contact-us-call-center-search-interface_53876-124009.jpg",
+  contactHero: "/images/references/umwelt-taxi.jpg",
 
   // Hero video (kept exactly as supplied by the client, no processing)
   heroVideo: "/videos/berlin-taxi.mp4",

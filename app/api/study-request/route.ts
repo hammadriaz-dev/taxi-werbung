@@ -3,6 +3,7 @@ import { Resend } from "resend";
 import { readFile } from "fs/promises";
 import path from "path";
 import { createStudyToken } from "@/lib/studyToken";
+import { emailShell, emailField, emailNotice } from "@/lib/emailTemplate";
 
 // Environment variable (same one used by /api/lead — set in Vercel/hosting panel):
 // RESEND_API_KEY -> from https://resend.com
@@ -73,18 +74,43 @@ export async function POST(request: Request) {
 
   try {
     // 1. Email the visitor — a backup copy / paper trail, not the primary delivery.
+    const isDe = (locale || "de") === "de";
+    const visitorHtml = emailShell({
+      preheader: `Ihre Studie: ${studyInfo.label}`,
+      title: isDe ? "Ihre angeforderte Studie" : "Your Requested Study",
+      bodyHtml: `
+        <p style="margin:0 0 14px 0;font-size:14px;color:#3a3630;line-height:1.6;">
+          ${isDe ? `Hallo ${escapeHtml(name)},` : `Hi ${escapeHtml(name)},`}
+        </p>
+        <p style="margin:0 0 14px 0;font-size:14px;color:#3a3630;line-height:1.6;">
+          ${
+            isDe
+              ? `vielen Dank für Ihr Interesse. Anbei finden Sie die vollständige Studie „${escapeHtml(studyInfo.label)}".`
+              : `Thank you for your interest. Attached you'll find the complete study "${escapeHtml(studyInfo.label)}".`
+          }
+        </p>
+        ${
+          attachment
+            ? ""
+            : emailNotice(
+                isDe
+                  ? "Unser Team stellt Ihnen die Studie in Kürze persönlich zu."
+                  : "Our team will send you the study shortly."
+              )
+        }
+        <p style="margin:14px 0 0 0;font-size:14px;color:#3a3630;line-height:1.6;">
+          ${isDe ? "Bei Fragen erreichen Sie uns jederzeit unter" : "If you have any questions, reach us anytime at"} info@taxi-werbung.org.
+        </p>
+      `,
+      footerNote: "Taxi-Werbung.org &middot; info@taxi-werbung.org",
+    });
+
     const visitorResult = await resend.emails.send({
       from: "Taxi-Werbung.org <noreply@taxi-werbung.org>",
       to: email,
       replyTo: LEAD_INBOX,
       subject: `Ihre angeforderte Studie: ${studyInfo.label}`,
-      html: `
-        <p>Hallo ${escapeHtml(name)},</p>
-        <p>vielen Dank für Ihr Interesse. Anbei finden Sie die vollständige Studie „${escapeHtml(studyInfo.label)}".</p>
-        ${attachment ? "" : "<p>Unser Team stellt Ihnen die Studie in Kürze persönlich zu.</p>"}
-        <p>Bei Fragen erreichen Sie uns jederzeit unter info@taxi-werbung.org.</p>
-        <p>Beste Grüße<br/>Ihr Taxi-Werbung.org Team</p>
-      `,
+      html: visitorHtml,
       attachments: attachment ? [attachment] : undefined,
     });
 
@@ -97,19 +123,28 @@ export async function POST(request: Request) {
     // 2. Notify the team — this is the actual lead-generation step, and the
     //    lead is considered "saved" once this succeeds (it lands in a real,
     //    retrievable inbox: info@taxi-werbung.org).
+    const teamHtml = emailShell({
+      preheader: `Neue Studienanfrage: ${studyInfo.label}`,
+      title: "Neue Studienanfrage",
+      bodyHtml: `
+        ${emailField("Studie", escapeHtml(studyInfo.label))}
+        ${emailField("Name", escapeHtml(name))}
+        ${emailField("Unternehmen", escapeHtml(company))}
+        ${emailField("E-Mail", escapeHtml(email))}
+        ${emailNotice(
+          `Sprache: ${escapeHtml(locale || "de")}` +
+            (attachment ? "" : " — HINWEIS: PDF-Anhang fehlte auf dem Server, bitte manuell nachsenden.")
+        )}
+      `,
+      footerNote: "Taxi-Werbung.org &middot; info@taxi-werbung.org &middot; Studienanfrage-Benachrichtigung",
+    });
+
     const teamResult = await resend.emails.send({
       from: "Taxi-Werbung.org Website <noreply@taxi-werbung.org>",
       to: LEAD_INBOX,
       replyTo: email,
       subject: `Neue Studienanfrage: ${studyInfo.label}`,
-      html: `
-        <h2>Neue Studienanfrage</h2>
-        <p><strong>Studie:</strong> ${escapeHtml(studyInfo.label)}</p>
-        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Unternehmen:</strong> ${escapeHtml(company)}</p>
-        <p><strong>E-Mail:</strong> ${escapeHtml(email)}</p>
-        <p><small>Sprache: ${escapeHtml(locale || "de")} ${attachment ? "" : "— HINWEIS: PDF-Anhang fehlte auf dem Server, bitte manuell nachsenden."}</small></p>
-      `,
+      html: teamHtml,
     });
 
     if (teamResult.error) {

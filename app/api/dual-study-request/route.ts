@@ -3,6 +3,7 @@ import { Resend } from "resend";
 import { readFile } from "fs/promises";
 import path from "path";
 import { createStudyToken } from "@/lib/studyToken";
+import { emailShell, emailField, emailNotice } from "@/lib/emailTemplate";
 
 // Powers the combined "Beide Studien kostenlos erhalten" box: a single email
 // field that requests BOTH studies at once, with no extra click and no
@@ -66,18 +67,43 @@ export async function POST(request: Request) {
   }
 
   try {
+    const isDe = (locale || "de") === "de";
+    const visitorHtml = emailShell({
+      preheader: isDe ? "Ihre angeforderten Studien" : "Your requested studies",
+      title: isDe ? "Ihre angeforderten Studien" : "Your Requested Studies",
+      bodyHtml: `
+        <p style="margin:0 0 14px 0;font-size:14px;color:#3a3630;line-height:1.6;">
+          ${isDe ? "Vielen Dank für Ihr Interesse." : "Thank you for your interest."}
+        </p>
+        <p style="margin:0 0 14px 0;font-size:14px;color:#3a3630;line-height:1.6;">
+          ${
+            isDe
+              ? `Anbei finden Sie beide Studien: „${escapeHtml(STUDY_FILES.febreze.label)}" und „${escapeHtml(STUDY_FILES.porta.label)}".`
+              : `Attached you'll find both studies: "${escapeHtml(STUDY_FILES.febreze.label)}" and "${escapeHtml(STUDY_FILES.porta.label)}".`
+          }
+        </p>
+        ${
+          missing.length
+            ? emailNotice(
+                isDe
+                  ? "Unser Team stellt Ihnen die fehlenden Unterlagen in Kürze persönlich zu."
+                  : "Our team will send you the remaining documents shortly."
+              )
+            : ""
+        }
+        <p style="margin:14px 0 0 0;font-size:14px;color:#3a3630;line-height:1.6;">
+          ${isDe ? "Bei Fragen erreichen Sie uns jederzeit unter" : "If you have any questions, reach us anytime at"} info@taxi-werbung.org.
+        </p>
+      `,
+      footerNote: "Taxi-Werbung.org &middot; info@taxi-werbung.org",
+    });
+
     const visitorResult = await resend.emails.send({
       from: "Taxi-Werbung.org <noreply@taxi-werbung.org>",
       to: email,
       replyTo: LEAD_INBOX,
       subject: "Ihre angeforderten Studien: AC Nielsen & Hochschule Fresenius",
-      html: `
-        <p>Vielen Dank für Ihr Interesse.</p>
-        <p>Anbei finden Sie beide Studien: „${escapeHtml(STUDY_FILES.febreze.label)}" und „${escapeHtml(STUDY_FILES.porta.label)}".</p>
-        ${missing.length ? "<p>Unser Team stellt Ihnen die fehlenden Unterlagen in Kürze persönlich zu.</p>" : ""}
-        <p>Bei Fragen erreichen Sie uns jederzeit unter info@taxi-werbung.org.</p>
-        <p>Beste Grüße<br/>Ihr Taxi-Werbung.org Team</p>
-      `,
+      html: visitorHtml,
       attachments: attachments.length ? attachments : undefined,
     });
 
@@ -85,18 +111,27 @@ export async function POST(request: Request) {
       console.error("Dual study confirmation email failed:", visitorResult.error);
     }
 
+    const teamHtml = emailShell({
+      preheader: "Neue Studienanfrage: beide Studien",
+      title: "Neue Studienanfrage (beide Studien)",
+      bodyHtml: `
+        ${emailField("E-Mail", escapeHtml(email))}
+        ${emailNotice(
+          `Sprache: ${escapeHtml(locale || "de")}` +
+            (missing.length
+              ? ` — HINWEIS: PDF-Anhang fehlte für: ${missing.join(", ")}, bitte manuell nachsenden.`
+              : "")
+        )}
+      `,
+      footerNote: "Taxi-Werbung.org &middot; info@taxi-werbung.org &middot; Studienanfrage-Benachrichtigung",
+    });
+
     const teamResult = await resend.emails.send({
       from: "Taxi-Werbung.org Website <noreply@taxi-werbung.org>",
       to: LEAD_INBOX,
       replyTo: email,
       subject: "Neue Studienanfrage: beide Studien (Febreze + porta)",
-      html: `
-        <h2>Neue Studienanfrage (beide Studien)</h2>
-        <p><strong>E-Mail:</strong> ${escapeHtml(email)}</p>
-        <p><small>Sprache: ${escapeHtml(locale || "de")} ${
-        missing.length ? `— HINWEIS: PDF-Anhang fehlte für: ${missing.join(", ")}, bitte manuell nachsenden.` : ""
-      }</small></p>
-      `,
+      html: teamHtml,
     });
 
     if (teamResult.error) {
