@@ -136,9 +136,6 @@ const de = {
         "Grafische Auswertung nach Zeitraum (89,2 % korrekte Werbe-Zuordnung)",
         "Vollständiges Fazit der Autoren",
       ],
-      quote: "[QUOTE NEEDED]",
-      quoteAuthor: "[NAME BENÖTIGT]",
-      quoteRole: "[POSITION BENÖTIGT]",
       requestButtonLabel: "Vollständige Studie anfordern",
       ctaText: "Auch Ihre Marke kann von Taxiwerbung profitieren.",
     },
@@ -243,17 +240,36 @@ const de = {
   },
   hallOfFame: {
     eyebrow: "HALL OF FAME",
-    title: "Stimmen unserer Kunden",
+    periodBadge: "Stimmen aus den 1990er-Jahren",
+    title: "Historische Referenzstimmen",
     intro:
-      "Ein weiterer Auszug aus unseren Referenzen: Das haben unsere Kunden über die von uns realisierten Taxiwerbekampagnen gesagt.",
+      "Ein weiterer Auszug aus unseren Referenzen: Das haben unsere Kunden über die von uns realisierten Taxiwerbekampagnen gesagt. Diese Aussagen stammen aus den 1990er-Jahren – ein Beleg dafür, dass wir schon seit Jahrzehnten im Taxiwerbe-Markt aktiv sind.",
     quotes: [
-      { quote: "[ZITAT BENÖTIGT]", author: "[NAME BENÖTIGT]", company: "SAS Hotel Nürnberg" },
-      { quote: "[ZITAT BENÖTIGT]", author: "[NAME BENÖTIGT]", company: "IBM" },
-      { quote: "[ZITAT BENÖTIGT]", author: "[NAME BENÖTIGT]", company: "Salamander" },
-      { quote: "[ZITAT BENÖTIGT]", author: "[NAME BENÖTIGT]", company: "Zentis" },
+      {
+        quote:
+          "Es ist mir eine diebische Freude, wenn Kollegen von anderen großen Hotels mich anrufen und sich darüber bei mir beschweren, dass meine Werbung vor ihrem Hotel steht.",
+        author: "Direktor",
+        company: "SAS Hotel Nürnberg",
+      },
+      {
+        quote: "Für Messen ist das Taxi das Kommunikationsmittel schlechthin.",
+        author: "Peter Nussbächer",
+        company: "IBM",
+      },
+      {
+        quote: "Hat mich doch kürzlich einer auf unsere Taxiwerbung angesprochen.",
+        author: "Herr Quehl",
+        company: "Salamander",
+      },
+      {
+        quote: "Mit unserer Taxiwerbung verändern wir das Stadtbild von heute auf morgen.",
+        author: "Herr Althammer, Marketingleiter",
+        company: "Zentis – Kampagne zur Internationalen Süßwarenmesse Köln",
+      },
     ],
     mitsubishiHeading: "Mitsubishi Electronics",
-    mitsubishiBody: "[ERFOLGSGESCHICHTE BENÖTIGT]",
+    mitsubishiBody:
+      "Der erste Test hat den Konzern überzeugt. Taxiwerbung wurde fester Bestandteil im Mediaplan. Die Marketingleiterin wurde in München von einem Taxi mit dieser Werbung ins Hotel gebracht.",
   },
   process: {
     eyebrow: "SO EINFACH GEHT TAXIWERBUNG",

@@ -173,6 +173,7 @@ const privacyDe: LegalPage = {
       heading: "",
       paragraphs: [
         "Diese Daten dienen ausschließlich dem sicheren und störungsfreien Betrieb der Website sowie der technischen Fehleranalyse.",
+        "Für die Registrierung und Verwaltung unserer Domain nutzen wir den Anbieter Hostinger International Ltd., 61 Lordou Vironos Street, 6023 Larnaca, Zypern. Weitere Informationen zum Datenschutz bei Hostinger finden Sie unter: https://www.hostinger.de/datenschutzrichtlinie",
       ],
     },
     {
@@ -301,6 +302,7 @@ const privacyEn: LegalPage = {
       heading: "",
       paragraphs: [
         "This data is used exclusively to ensure the secure, uninterrupted operation of the website and for technical error analysis.",
+        "We use Hostinger International Ltd., 61 Lordou Vironos Street, 6023 Larnaca, Cyprus, to register and manage our domain. Further information on data protection at Hostinger is available at: https://www.hostinger.com/privacy-policy",
       ],
     },
     {

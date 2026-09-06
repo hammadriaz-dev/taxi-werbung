@@ -138,9 +138,6 @@ const en: Dictionary = {
         "Chart breakdown by period (89.2% correct ad attribution)",
         "Full conclusion from the authors",
       ],
-      quote: "[QUOTE NEEDED]",
-      quoteAuthor: "[NAME NEEDED]",
-      quoteRole: "[TITLE NEEDED]",
       requestButtonLabel: "Request Full Study",
       ctaText: "Your brand could benefit from taxi advertising too.",
     },
@@ -245,17 +242,36 @@ const en: Dictionary = {
   },
   hallOfFame: {
     eyebrow: "HALL OF FAME",
-    title: "What our clients say",
+    periodBadge: "Voices from the 1990s",
+    title: "Historical Client Testimonials",
     intro:
-      "Another selection from our references: This is what our clients said about the taxi advertising campaigns we delivered for them.",
+      "Another selection from our references: This is what our clients said about the taxi advertising campaigns we delivered for them. These statements date from the 1990s — evidence that we have been active in the taxi advertising market for decades.",
     quotes: [
-      { quote: "[QUOTE NEEDED]", author: "[NAME NEEDED]", company: "SAS Hotel Nürnberg" },
-      { quote: "[QUOTE NEEDED]", author: "[NAME NEEDED]", company: "IBM" },
-      { quote: "[QUOTE NEEDED]", author: "[NAME NEEDED]", company: "Salamander" },
-      { quote: "[QUOTE NEEDED]", author: "[NAME NEEDED]", company: "Zentis" },
+      {
+        quote:
+          "It gives me a wicked pleasure when colleagues from other big hotels call me to complain that my advertising is standing right in front of their hotel.",
+        author: "Director",
+        company: "SAS Hotel Nürnberg",
+      },
+      {
+        quote: "For trade fairs, the taxi is the communication medium par excellence.",
+        author: "Peter Nussbächer",
+        company: "IBM",
+      },
+      {
+        quote: "Just recently, someone approached me about our taxi advertising.",
+        author: "Mr. Quehl",
+        company: "Salamander",
+      },
+      {
+        quote: "With our taxi advertising, we change the cityscape from one day to the next.",
+        author: "Mr. Althammer, Marketing Manager",
+        company: "Zentis – campaign for the International Sweets Fair in Cologne",
+      },
     ],
     mitsubishiHeading: "Mitsubishi Electronics",
-    mitsubishiBody: "[SUCCESS STORY NEEDED]",
+    mitsubishiBody:
+      "The initial test convinced the group. Taxi advertising became a fixed part of the media plan. The marketing manager was driven to her hotel in Munich by a taxi carrying this very advertisement.",
   },
   process: {
     eyebrow: "HOW TAXI ADVERTISING WORKS",

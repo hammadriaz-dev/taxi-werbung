@@ -62,7 +62,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
 
           <div className="mt-9 flex flex-wrap gap-4">
             <a
-              href="#contact-form"
+              href="mailto:info@taxi-werbung.org"
               className="inline-flex items-center rounded-md sm:rounded-full bg-amber px-8 py-4 font-semibold text-ink hover:bg-amberDark transition-colors"
             >
               {dict.hero.ctaPrimary}
@@ -471,9 +471,14 @@ export default function HomePage({ params }: { params: { locale: string } }) {
         return (
           <section className="bg-ink">
             <div className="max-w-content mx-auto px-5 md:px-8 py-16 md:py-24">
-              <span className="inline-flex items-center rounded-full bg-amber/15 border border-amber/40 px-4 py-1.5 text-xs md:text-sm font-bold uppercase tracking-[0.15em] text-amber">
-                {dict.hallOfFame.eyebrow}
-              </span>
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="inline-flex items-center rounded-full bg-amber/15 border border-amber/40 px-4 py-1.5 text-xs md:text-sm font-bold uppercase tracking-[0.15em] text-amber">
+                  {dict.hallOfFame.eyebrow}
+                </span>
+                <span className="inline-flex items-center rounded-full bg-cream/10 border border-cream/25 px-3.5 py-1.5 text-xs font-semibold text-cream/80">
+                  {dict.hallOfFame.periodBadge}
+                </span>
+              </div>
               <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold text-cream">
                 {dict.hallOfFame.title}
               </h2>
@@ -489,6 +494,9 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                       <p className="text-lg leading-relaxed text-cream italic">"{q.quote}"</p>
                       <p className="mt-4 font-display font-bold text-cream">{q.author}</p>
                       <p className="text-sm text-cream/50">{q.company}</p>
+                      <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-amber/70">
+                        {dict.hallOfFame.periodBadge}
+                      </p>
                     </div>
                   ))}
                 </div>
