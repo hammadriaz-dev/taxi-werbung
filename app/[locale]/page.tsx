@@ -62,7 +62,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
 
           <div className="mt-9 flex flex-wrap gap-4">
             <a
-              href="mailto:info@taxi-werbung.org"
+              href="#contact-form"
               className="inline-flex items-center rounded-md sm:rounded-full bg-amber px-8 py-4 font-semibold text-ink hover:bg-amberDark transition-colors"
             >
               {dict.hero.ctaPrimary}
@@ -170,7 +170,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                 adds a transparent mailto link positioned on top of the CTA area. */}
             <a
               href="mailto:info@taxi-werbung.org"
-              aria-label="Jetzt kostenloses Angebot per E-Mail anfordern"
+              aria-label={dict.urbanVisuals.ctaAriaEmail}
               className="absolute"
               style={{ left: "86%", top: "30.5%", width: "12.3%", height: "57.6%" }}
             />
@@ -201,13 +201,13 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                 the PNG itself is untouched. */}
             <a
               href="mailto:info@taxi-werbung.org"
-              aria-label="Kostenloses Angebot anfordern per E-Mail"
+              aria-label={dict.urbanVisuals.ctaAriaEmail}
               className="absolute"
               style={{ left: "5.3%", top: "81.5%", width: "23.2%", height: "12.7%" }}
             />
             <a
               href="#contact-form"
-              aria-label="Get your free quote — zum Kontaktformular"
+              aria-label={dict.urbanVisuals.ctaAriaForm}
               className="absolute"
               style={{ left: "29.3%", top: "81.2%", width: "15.2%", height: "10.4%" }}
             />
@@ -355,17 +355,80 @@ export default function HomePage({ params }: { params: { locale: string } }) {
         </div>
 
         <h3 className="mt-16 font-display text-2xl md:text-3xl font-bold text-ink">
-          {dict.references.title}
+          {dict.references.gridTitle}
         </h3>
         <p className="mt-3 max-w-2xl text-charcoal/75 leading-relaxed">{dict.references.intro}</p>
 
-        <div className="mt-8 max-w-3xl">
+        {/* Full, immediately visible overview of every supplied campaign — no
+            carousel interaction required to see any of them. */}
+        <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          {media.references.map((ref, i) => (
+            <div key={`${ref.src}-${i}`} className="group">
+              <div className="relative w-full aspect-square overflow-hidden rounded-2xl border border-line bg-ink/5">
+                <Image
+                  src={ref.src}
+                  alt={dict.references.captions[i] || ref.name}
+                  fill
+                  sizes="(min-width: 768px) 25vw, 50vw"
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <p className="mt-2 text-sm font-semibold text-ink">{ref.name}</p>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="mt-16 font-display text-xl md:text-2xl font-bold text-ink">
+          {dict.references.carouselTitle}
+        </h3>
+        <div className="mt-6 max-w-3xl">
           <ReferencesCarousel
             items={media.references.slice(1)}
             captions={dict.references.captions.slice(1)}
             prevLabel={dict.references.prevLabel}
             nextLabel={dict.references.nextLabel}
           />
+        </div>
+      </section>
+
+      {/* Historical References & Client Quotes — Ogilvy & Mather / IBM, Martin,
+          Brandt und Partner / Mitsubishi Electronics, Young & Rubicam / Electrolux,
+          Scholz & Friends / Dresdner Morgenpost, plus Agfa, Sanyo, Panasonic, NCR.
+          Verbatim quotes for the 5 named clients live in dict.hallOfFame below;
+          this block documents the wider historical agency/brand relationships that
+          have no surviving photo or quote text. */}
+      <section className="bg-white border-y border-line">
+        <div className="max-w-content mx-auto px-5 md:px-8 py-16 md:py-24">
+          <span className="inline-flex items-center rounded-full bg-amberDark/10 border border-amberDark/30 px-4 py-1.5 text-xs md:text-sm font-bold uppercase tracking-[0.15em] text-amberDark">
+            {dict.agencyHistory.eyebrow}
+          </span>
+          <h2 className="mt-4 max-w-2xl font-display text-2xl md:text-3xl font-bold text-ink">
+            {dict.agencyHistory.title}
+          </h2>
+          <p className="mt-4 max-w-2xl text-charcoal/75 leading-relaxed">{dict.agencyHistory.body}</p>
+
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            {dict.agencyHistory.pairs.map((pair) => (
+              <div
+                key={pair.brand}
+                className="flex items-center justify-between gap-3 rounded-xl border border-line bg-cream/30 px-5 py-3.5"
+              >
+                <span className="font-display font-bold text-ink">{pair.brand}</span>
+                <span className="text-sm text-charcoal/60">{pair.agency}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 flex flex-wrap gap-2.5">
+            {dict.agencyHistory.otherBrands.map((brand) => (
+              <span
+                key={brand}
+                className="inline-flex items-center rounded-full bg-ink/[0.04] border border-line px-4 py-1.5 text-sm font-semibold text-ink"
+              >
+                {brand}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 

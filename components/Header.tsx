@@ -59,7 +59,7 @@ export default function Header({ locale, dict }: { locale: string; dict: Diction
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            aria-label={open ? "Menü schließen" : "Menü öffnen"}
+            aria-label={open ? dict.nav.menuClose : dict.nav.menuOpen}
             aria-expanded={open}
             aria-controls="mobile-nav"
             className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg border border-amber/40 text-amber"

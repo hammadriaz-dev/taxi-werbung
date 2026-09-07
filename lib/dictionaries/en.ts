@@ -21,9 +21,11 @@ const en: Dictionary = {
   },
   nav: {
     home: "Home",
-    about: "About Us",
+    about: "About us",
     contact: "Contact",
     cta: "Get a Quote",
+    menuOpen: "Open menu",
+    menuClose: "Close menu",
   },
   hero: {
     eyebrow: "TAXI ADVERTISING IN GERMANY",
@@ -94,7 +96,7 @@ const en: Dictionary = {
       imageCaption: "Taxi advertising for porta Möbel & Mehr in Berlin and Potsdam",
       bodyParagraphs: [
         "porta Möbel & Mehr, the furniture giant in Potsdam, has advertised successfully with large-format taxi campaigns across Berlin and Brandenburg for years — visible citywide, day and night.",
-        "The effectiveness and brand recognition of this campaign was scientifically studied by Hochschule Fresenius in 2017, on behalf of TAXI media.",
+        "The underlying consumer survey was conducted in November/December 2016 in Cologne, where porta! also operates several locations. The Hochschule Fresenius study, commissioned by TAXI media, was published in January 2017.",
       ],
       basicsHeading: "Study Basis",
       basicsItems: [
@@ -155,6 +157,7 @@ const en: Dictionary = {
     errorBody: "Something went wrong. Please try again or email us directly at info@taxi-werbung.org.",
     required: "* Required",
     privacyNote: "Your details are used only to send you the study and for follow-up questions.",
+    privacyLinkText: "privacy policy",
     close: "Close",
     nextStepIntro: "And now for the next step:",
     nextStepLabel: "Get a free campaign idea for my company",
@@ -171,6 +174,7 @@ const en: Dictionary = {
     submit: "Request Studies Now",
     sending: "Sending...",
     footnote: "Free and non-binding.",
+    privacyLinkText: "privacy policy",
     successTitle: "Thank you!",
     successBody: "Both studies are opening in new tabs. You'll also receive a copy by email shortly.",
     errorBody: "Something went wrong. Please try again or email us directly at info@taxi-werbung.org.",
@@ -238,12 +242,24 @@ const en: Dictionary = {
   },
   clientsIntro: {
     title: "Our clients. Our campaigns. Scientifically studied advertising impact.",
-    body: "Procter & Gamble with Fébrèze and porta! Möbel represent the many well-known companies and brands for which we have delivered taxi advertising campaigns. The studies by AC Nielsen and Hochschule Fresenius provide additional evidence of the impact of these campaigns.",
+    body: "Procter & Gamble with Febreze and porta! Möbel represent the many well-known companies and brands for which we have delivered taxi advertising campaigns. The studies by AC Nielsen and Hochschule Fresenius provide additional evidence of the impact of these campaigns.",
+  },
+  agencyHistory: {
+    eyebrow: "AGENCY HISTORY",
+    title: "Documented Agency and Company Relationships",
+    body: "Over the decades we have worked with renowned advertising agencies and their clients. This collaboration is documented:",
+    pairs: [
+      { brand: "IBM", agency: "Ogilvy & Mather" },
+      { brand: "Mitsubishi Electronics", agency: "Martin, Brandt und Partner" },
+      { brand: "Electrolux", agency: "Young & Rubicam" },
+      { brand: "Dresdner Morgenpost", agency: "Scholz & Friends" },
+    ],
+    otherBrands: ["Agfa", "Sanyo", "Panasonic", "NCR"],
   },
   hallOfFame: {
     eyebrow: "HALL OF FAME",
     periodBadge: "Voices from the 1990s",
-    title: "Historical Client Testimonials",
+    title: "Historical References and Client Testimonials",
     intro:
       "Another selection from our references: This is what our clients said about the taxi advertising campaigns we delivered for them. These statements date from the 1990s — evidence that we have been active in the taxi advertising market for decades.",
     quotes: [
@@ -318,6 +334,8 @@ const en: Dictionary = {
     visual1Caption: "Visible at the most iconic locations in German cities.",
     visual2Alt: "The advertising taxi – the benefits of taxi advertising at a glance",
     visual2Caption: "Nationwide reach for local and international clients.",
+    ctaAriaEmail: "Request a free quote by email",
+    ctaAriaForm: "Request a free quote — go to contact form",
   },
   showreel: {
     eyebrow: "TAXI ADVERTISING IN ACTION",
@@ -328,7 +346,8 @@ const en: Dictionary = {
   },
   references: {
     eyebrow: "SELECTED CAMPAIGNS",
-    title: "Further References",
+    gridTitle: "Selected References and Campaigns",
+    carouselTitle: "More Impressions in the Carousel",
     intro: "Real campaigns, real vehicles, real presence in the cityscape — from regional businesses to international brands. This is only a small selection from our customer reference portfolio.",
     featuredEyebrow: "LATEST CAMPAIGN",
     featuredTitle: "Next Door brings fitness to the streets.",
@@ -377,6 +396,7 @@ const en: Dictionary = {
   contact: {
     heading: "Contact Us",
     kicker: "For taxi advertising",
+    heroAlt: "Taxi advertising on a real taxi in city traffic",
     intro: "Tell us a little about your project. We typically reply within 24 hours with a tailored quote.",
     form: {
       company: "Company name",

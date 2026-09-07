@@ -25,7 +25,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
           <div className="relative w-full aspect-[4/3] overflow-hidden rounded-3xl border border-line mb-8">
             <Image
               src={media.contactHero}
-              alt="Kontaktieren Sie Taxi-Werbung.org"
+              alt={c.heroAlt}
               fill
               sizes="(min-width: 1024px) 480px, 90vw"
               className="object-cover"

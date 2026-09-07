@@ -22,6 +22,8 @@ const de = {
     about: "Über uns",
     contact: "Kontakt",
     cta: "Angebot anfordern",
+    menuOpen: "Menü öffnen",
+    menuClose: "Menü schließen",
   },
   hero: {
     eyebrow: "TAXIWERBUNG IN DEUTSCHLAND",
@@ -92,7 +94,7 @@ const de = {
       imageCaption: "Taxiwerbung für porta Möbel & Mehr in Berlin und Potsdam",
       bodyParagraphs: [
         "porta Möbel & Mehr, der Möbelgigant in Potsdam, wirbt seit Jahren erfolgreich mit großflächiger Taxiwerbung in Berlin und Brandenburg – sichtbar im gesamten Stadtgebiet, bei Tag und bei Nacht.",
-        "Die Wirksamkeit und Wiedererkennung dieser Kampagne wurde 2017 von der Hochschule Fresenius im Auftrag von TAXI media wissenschaftlich untersucht.",
+        "Die zugrunde liegende Verbraucherbefragung wurde im November/Dezember 2016 in Köln durchgeführt, wo porta! ebenfalls mit mehreren Standorten präsent ist. Die Studie der Hochschule Fresenius im Auftrag von TAXI media wurde im Januar 2017 veröffentlicht.",
       ],
       basicsHeading: "Grundlage der Studie",
       basicsItems: [
@@ -153,6 +155,7 @@ const de = {
     errorBody: "Da ist leider etwas schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@taxi-werbung.org.",
     required: "* Pflichtfeld",
     privacyNote: "Ihre Daten werden ausschließlich zur Zusendung der Studie und für Rückfragen genutzt.",
+    privacyLinkText: "Datenschutzerklärung",
     close: "Schließen",
     nextStepIntro: "Und jetzt zum nächsten Schritt:",
     nextStepLabel: "Kostenlose Kampagnenidee für mein Unternehmen erhalten",
@@ -169,6 +172,7 @@ const de = {
     submit: "Studien jetzt anfordern",
     sending: "Wird gesendet...",
     footnote: "Kostenlos und unverbindlich.",
+    privacyLinkText: "Datenschutzerklärung",
     successTitle: "Vielen Dank!",
     successBody: "Beide Studien öffnen sich in neuen Tabs. Zusätzlich erhalten Sie in Kürze eine Kopie per E-Mail.",
     errorBody: "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@taxi-werbung.org.",
@@ -236,12 +240,24 @@ const de = {
   },
   clientsIntro: {
     title: "Unsere Kunden. Unsere Kampagnen. Wissenschaftlich untersuchte Werbewirkung.",
-    body: "Procter & Gamble mit Fébrèze und porta! Möbel stehen beispielhaft für zahlreiche bekannte Unternehmen und Marken, für die wir Taxiwerbekampagnen realisiert haben. Die Untersuchungen von AC Nielsen und der Hochschule Fresenius belegen zusätzlich die Wirkung dieser Kampagnen.",
+    body: "Procter & Gamble mit Febreze und porta! Möbel stehen beispielhaft für zahlreiche bekannte Unternehmen und Marken, für die wir Taxiwerbekampagnen realisiert haben. Die Untersuchungen von AC Nielsen und der Hochschule Fresenius belegen zusätzlich die Wirkung dieser Kampagnen.",
+  },
+  agencyHistory: {
+    eyebrow: "AGENTUR-HISTORIE",
+    title: "Dokumentierte Agentur- und Unternehmensbeziehungen",
+    body: "Über die Jahrzehnte haben wir mit renommierten Werbeagenturen und deren Kunden zusammengearbeitet. Diese Zusammenarbeit ist dokumentiert:",
+    pairs: [
+      { brand: "IBM", agency: "Ogilvy & Mather" },
+      { brand: "Mitsubishi Electronics", agency: "Martin, Brandt und Partner" },
+      { brand: "Electrolux", agency: "Young & Rubicam" },
+      { brand: "Dresdner Morgenpost", agency: "Scholz & Friends" },
+    ],
+    otherBrands: ["Agfa", "Sanyo", "Panasonic", "NCR"],
   },
   hallOfFame: {
     eyebrow: "HALL OF FAME",
     periodBadge: "Stimmen aus den 1990er-Jahren",
-    title: "Historische Referenzstimmen",
+    title: "Historische Referenzen und Kundenstimmen",
     intro:
       "Ein weiterer Auszug aus unseren Referenzen: Das haben unsere Kunden über die von uns realisierten Taxiwerbekampagnen gesagt. Diese Aussagen stammen aus den 1990er-Jahren – ein Beleg dafür, dass wir schon seit Jahrzehnten im Taxiwerbe-Markt aktiv sind.",
     quotes: [
@@ -316,6 +332,8 @@ const de = {
     visual1Caption: "Sichtbar an den bekanntesten Orten deutscher Großstädte.",
     visual2Alt: "Das Werbetaxi – Vorteile der Taxiwerbung auf einen Blick",
     visual2Caption: "Deutschlandweite Reichweite für lokale und internationale Kunden.",
+    ctaAriaEmail: "Kostenloses Angebot per E-Mail anfordern",
+    ctaAriaForm: "Kostenloses Angebot anfordern – zum Kontaktformular",
   },
   showreel: {
     eyebrow: "TAXIWERBUNG IN AKTION",
@@ -326,7 +344,8 @@ const de = {
   },
   references: {
     eyebrow: "REFERENZ-KAMPAGNEN",
-    title: "Weitere Referenzen",
+    gridTitle: "Ausgewählte Referenzen und Kampagnen",
+    carouselTitle: "Weitere Eindrücke im Karussell",
     intro: "Echte Kampagnen, echte Fahrzeuge, echte Präsenz im Stadtbild – von regionalen Unternehmen bis zu internationalen Marken. Dies ist nur eine kleine Auswahl aus unserem Kundenreferenzportfolio.",
     featuredEyebrow: "NEUESTE KAMPAGNE",
     featuredTitle: "Next Door bringt Fitness auf die Straße.",
@@ -375,6 +394,7 @@ const de = {
   contact: {
     heading: "Kontaktieren Sie uns",
     kicker: "Für Taxiwerbung",
+    heroAlt: "Taxiwerbung auf einem echten Taxi im Straßenverkehr",
     intro: "Erzählen Sie uns kurz von Ihrem Vorhaben. Wir melden uns in der Regel innerhalb von 24 Stunden mit einem passenden Angebot.",
     form: {
       company: "Firmenname",
