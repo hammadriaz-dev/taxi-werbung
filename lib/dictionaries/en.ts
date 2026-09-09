@@ -27,6 +27,12 @@ const en: Dictionary = {
     menuOpen: "Open menu",
     menuClose: "Close menu",
   },
+  errorPage: {
+    title: "Something went wrong.",
+    body: "An error occurred while loading this page. Please try again, or reload the page.",
+    retry: "Try again",
+    home: "Go to homepage",
+  },
   hero: {
     eyebrow: "TAXI ADVERTISING IN GERMANY",
     title: "Your brand moves through Germany!",
@@ -249,10 +255,10 @@ const en: Dictionary = {
     title: "Documented Agency and Company Relationships",
     body: "Over the decades we have worked with renowned advertising agencies and their clients. This collaboration is documented:",
     pairs: [
-      { brand: "IBM", agency: "Ogilvy & Mather" },
+      { brand: "IBM", agency: "Ogilvy and Mather" },
       { brand: "Mitsubishi Electronics", agency: "Martin, Brandt und Partner" },
-      { brand: "Electrolux", agency: "Young & Rubicam" },
-      { brand: "Dresdner Morgenpost", agency: "Scholz & Friends" },
+      { brand: "Electrolux", agency: "Young and Rubicam" },
+      { brand: "Dresdner Morgenpost", agency: "Scholz and Friends" },
     ],
     otherBrands: ["Agfa", "Sanyo", "Panasonic", "NCR"],
   },
@@ -287,7 +293,7 @@ const en: Dictionary = {
     ],
     mitsubishiHeading: "Mitsubishi Electronics",
     mitsubishiBody:
-      "The initial test convinced the group. Taxi advertising became a fixed part of the media plan. The marketing manager was driven to her hotel in Munich by a taxi carrying this very advertisement.",
+      "The marketing manager of Mitsubishi Electronics, Mobile Phones, was delighted. The initial test with taxi advertising had fully convinced the group, and since then taxi advertising has been a fixed part of the media plan. A small aside: the marketing manager was driven to her hotel in Munich by a taxi carrying this very advertisement.",
   },
   process: {
     eyebrow: "HOW TAXI ADVERTISING WORKS",

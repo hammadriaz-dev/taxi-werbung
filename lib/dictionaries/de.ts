@@ -25,6 +25,12 @@ const de = {
     menuOpen: "Menü öffnen",
     menuClose: "Menü schließen",
   },
+  errorPage: {
+    title: "Etwas ist schiefgelaufen.",
+    body: "Beim Laden dieser Seite ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut, oder laden Sie die Seite neu.",
+    retry: "Erneut versuchen",
+    home: "Zur Startseite",
+  },
   hero: {
     eyebrow: "TAXIWERBUNG IN DEUTSCHLAND",
     title: "Ihre Werbung fährt\ndurch Deutschland!",
@@ -247,10 +253,10 @@ const de = {
     title: "Dokumentierte Agentur- und Unternehmensbeziehungen",
     body: "Über die Jahrzehnte haben wir mit renommierten Werbeagenturen und deren Kunden zusammengearbeitet. Diese Zusammenarbeit ist dokumentiert:",
     pairs: [
-      { brand: "IBM", agency: "Ogilvy & Mather" },
+      { brand: "IBM", agency: "Ogilvy and Mather" },
       { brand: "Mitsubishi Electronics", agency: "Martin, Brandt und Partner" },
-      { brand: "Electrolux", agency: "Young & Rubicam" },
-      { brand: "Dresdner Morgenpost", agency: "Scholz & Friends" },
+      { brand: "Electrolux", agency: "Young and Rubicam" },
+      { brand: "Dresdner Morgenpost", agency: "Scholz and Friends" },
     ],
     otherBrands: ["Agfa", "Sanyo", "Panasonic", "NCR"],
   },
@@ -263,7 +269,7 @@ const de = {
     quotes: [
       {
         quote:
-          "Es ist mir eine diebische Freude, wenn Kollegen von anderen großen Hotels mich anrufen und sich darüber bei mir beschweren, dass meine Werbung vor ihrem Hotel steht.",
+          "Es ist mir eine diebische Freude, wenn Kollegen von anderen großen Hotels mich anrufen und sich darüber bei mir beschweren, daß meine Werbung vor ihrem Hotel steht.",
         author: "Direktor",
         company: "SAS Hotel Nürnberg",
       },
@@ -285,7 +291,7 @@ const de = {
     ],
     mitsubishiHeading: "Mitsubishi Electronics",
     mitsubishiBody:
-      "Der erste Test hat den Konzern überzeugt. Taxiwerbung wurde fester Bestandteil im Mediaplan. Die Marketingleiterin wurde in München von einem Taxi mit dieser Werbung ins Hotel gebracht.",
+      "Die Marketingleiterin von Mitsubishi Electronics, Mobiltelefone war begeistert. Der erste Test in Sachen Taxiwerbung hatte den Konzern voll überzeugt und seitdem ist Taxiwerbung als fester Bestandteil im Mediaplan integriert. Kleine Aufmerksamkeit am Rande: Die Marketingleiterin wurde in München von einem Taxi mit dieser Werbung ins Hotel gebracht.",
   },
   process: {
     eyebrow: "SO EINFACH GEHT TAXIWERBUNG",
