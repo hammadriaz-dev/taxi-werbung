@@ -16,12 +16,12 @@ const en: Dictionary = {
     contact: {
       title: "Contact | Taxi-Werbung.org",
       description:
-        "Request a no-obligation quote for taxi advertising. We reply within 24 hours.",
+        "Request a no-obligation quote for taxi advertising.",
     },
   },
   nav: {
     home: "Home",
-    about: "About us",
+    about: "About Us",
     contact: "Contact",
     cta: "Get a Quote",
     menuOpen: "Open menu",
@@ -354,6 +354,22 @@ const en: Dictionary = {
     eyebrow: "SELECTED CAMPAIGNS",
     gridTitle: "Selected References and Campaigns",
     carouselTitle: "More Impressions in the Carousel",
+    gridLabels: [
+      "NEXT DOOR Fitness",
+      "REWE To Go",
+      "Ay Yildiz",
+      "Sparkasse Nienburg",
+      "porta! Möbel",
+      "porta! Möbel",
+      "porta! Möbel",
+      "Bundeswehr",
+      "Flic Flac",
+      "Umwelt-Taxi",
+      "Campaign Installation",
+      "Turkish Airlines",
+      "Authentic Cuba",
+      "Travel Texas",
+    ],
     intro: "Real campaigns, real vehicles, real presence in the cityscape — from regional businesses to international brands. This is only a small selection from our customer reference portfolio.",
     featuredEyebrow: "LATEST CAMPAIGN",
     featuredTitle: "Next Door brings fitness to the streets.",
@@ -382,12 +398,13 @@ const en: Dictionary = {
   homeCta: {
     kicker: "YOUR NEXT STEP",
     title: "Let's put your advertising on the road!",
-    body: "Your brand, visible on hundreds of taxis, moving through Germany every day. Request your free, no-obligation quote now — we'll get back to you within 24 hours with a campaign concept that fits.",
+    body: "Your brand, visible on hundreds of taxis, moving through Germany every day. Request your free, no-obligation quote now — we'll get back to you with a campaign concept that fits.",
     badge: "Free & no obligation · Reply in 24 hrs",
   },
   about: {
     heading: "About Us",
-    kicker: "DoorPanelAds",
+    kicker: "Our Concept",
+    heroAlt: "Taxi-Werbung.org team installing a taxi advertising campaign",
     lead: "Revolutionizing taxi advertising.",
     body1:
       "Taxi-Werbung.org supports advertising campaigns from the first idea through consulting and concept development to successful execution. For the realization of campaigns, Taxi-Werbung.org partners with taxi media on a project basis.",
@@ -403,7 +420,7 @@ const en: Dictionary = {
     heading: "Contact Us",
     kicker: "For taxi advertising",
     heroAlt: "Taxi advertising on a real taxi in city traffic",
-    intro: "Tell us a little about your project. We typically reply within 24 hours with a tailored quote.",
+    intro: "Tell us a little about your project. We'll get back to you with a tailored quote.",
     form: {
       company: "Company name",
       contact: "Contact person",

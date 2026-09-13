@@ -14,12 +14,12 @@ const de = {
     contact: {
       title: "Kontakt | Taxi-Werbung.org",
       description:
-        "Fordern Sie ein unverbindliches Angebot für Taxiwerbung an. Wir melden uns innerhalb von 24 Stunden.",
+        "Fordern Sie ein unverbindliches Angebot für Taxiwerbung an.",
     },
   },
   nav: {
-    home: "Home",
-    about: "Über uns",
+    home: "Startseite",
+    about: "Über Uns",
     contact: "Kontakt",
     cta: "Angebot anfordern",
     menuOpen: "Menü öffnen",
@@ -352,6 +352,22 @@ const de = {
     eyebrow: "REFERENZ-KAMPAGNEN",
     gridTitle: "Ausgewählte Referenzen und Kampagnen",
     carouselTitle: "Weitere Eindrücke im Karussell",
+    gridLabels: [
+      "NEXT DOOR Fitness",
+      "REWE To Go",
+      "Ay Yildiz",
+      "Sparkasse Nienburg",
+      "porta! Möbel",
+      "porta! Möbel",
+      "porta! Möbel",
+      "Bundeswehr",
+      "Flic Flac",
+      "Umwelt-Taxi",
+      "Kampagnen-Installation",
+      "Turkish Airlines",
+      "Authentic Cuba",
+      "Travel Texas",
+    ],
     intro: "Echte Kampagnen, echte Fahrzeuge, echte Präsenz im Stadtbild – von regionalen Unternehmen bis zu internationalen Marken. Dies ist nur eine kleine Auswahl aus unserem Kundenreferenzportfolio.",
     featuredEyebrow: "NEUESTE KAMPAGNE",
     featuredTitle: "Next Door bringt Fitness auf die Straße.",
@@ -380,12 +396,13 @@ const de = {
   homeCta: {
     kicker: "IHR NÄCHSTER SCHRITT",
     title: "Bringen Sie Ihre Werbung auf die Straße!",
-    body: "Ihre Marke, sichtbar auf Hunderten von Taxis, täglich unterwegs in ganz Deutschland. Fordern Sie jetzt Ihr unverbindliches Angebot an — wir melden uns innerhalb von 24 Stunden mit einer passenden Kampagnenidee.",
+    body: "Ihre Marke, sichtbar auf Hunderten von Taxis, täglich unterwegs in ganz Deutschland. Fordern Sie jetzt Ihr unverbindliches Angebot an — wir melden uns mit einer passenden Kampagnenidee.",
     badge: "Kostenlos & unverbindlich · Antwort in 24 Std.",
   },
   about: {
     heading: "Über Uns",
-    kicker: "DoorPanelAds",
+    kicker: "Unser Konzept",
+    heroAlt: "Team von Taxi-Werbung.org bei der Montage einer Taxiwerbekampagne",
     lead: "Revolutioniert Taxiwerbung.",
     body1:
       "Taxi-Werbung.org begleitet Werbekampagnen von der ersten Idee über Beratung und Konzeption bis zur erfolgreichen Umsetzung. Für die Realisierung der Kampagnen arbeitet Taxi-Werbung.org projektbezogen mit taxi media zusammen.",
@@ -401,7 +418,7 @@ const de = {
     heading: "Kontaktieren Sie uns",
     kicker: "Für Taxiwerbung",
     heroAlt: "Taxiwerbung auf einem echten Taxi im Straßenverkehr",
-    intro: "Erzählen Sie uns kurz von Ihrem Vorhaben. Wir melden uns in der Regel innerhalb von 24 Stunden mit einem passenden Angebot.",
+    intro: "Erzählen Sie uns kurz von Ihrem Vorhaben. Wir melden uns mit einem passenden Angebot.",
     form: {
       company: "Firmenname",
       contact: "Ansprechpartner",

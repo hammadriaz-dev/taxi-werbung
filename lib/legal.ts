@@ -33,6 +33,10 @@ const imprintDe: LegalPage = {
       paragraphs: ["Detlef Zeich (Geschäftsführer)"],
     },
     {
+      heading: "Ansprechpartner Werbeflächenvermietung",
+      paragraphs: ["Ralf Klimmeck", "Telefon: 0201 – 830 34 15"],
+    },
+    {
       heading: "Kontakt",
       paragraphs: [
         "Telefon: +49 152 58 565 656",
@@ -53,13 +57,6 @@ const imprintDe: LegalPage = {
     {
       heading: "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
       paragraphs: ["Detlef Zeich", "Bultmannsort 55, 49453 Wetschen, Deutschland"],
-    },
-    {
-      heading: "EU-Streitschlichtung",
-      paragraphs: [
-        "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/. Unsere E-Mail-Adresse finden Sie oben im Impressum.",
-        "Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
-      ],
     },
     {
       heading: "Haftung für Inhalte",
@@ -103,6 +100,10 @@ const imprintEn: LegalPage = {
     {
       heading: "Represented by",
       paragraphs: ["Detlef Zeich (Managing Director)"],
+    },
+    {
+      heading: "Contact person for advertising space rental",
+      paragraphs: ["Ralf Klimmeck", "Phone: 0201 – 830 34 15"],
     },
     {
       heading: "Contact",
@@ -384,6 +385,10 @@ const privacyEn: LegalPage = {
     },
   ],
 };
+
+export function privacySlug(locale: string): string {
+  return locale === "de" ? "datenschutz" : "privacy";
+}
 
 export function getImprint(locale: string): LegalPage {
   return locale === "en" ? imprintEn : imprintDe;

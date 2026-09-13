@@ -62,7 +62,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
 
           <div className="mt-9 flex flex-wrap gap-4">
             <a
-              href="#contact-form"
+              href="mailto:info@taxi-werbung.org"
               className="inline-flex items-center rounded-md sm:rounded-full bg-amber px-8 py-4 font-semibold text-ink hover:bg-amberDark transition-colors"
             >
               {dict.hero.ctaPrimary}
@@ -333,7 +333,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
         <div className="relative mt-8 w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-3xl">
           <Image
             src={media.references[0].src}
-            alt={media.references[0].name}
+            alt={dict.references.gridLabels[0]}
             fill
             sizes="100vw"
             className="object-cover"
@@ -367,13 +367,13 @@ export default function HomePage({ params }: { params: { locale: string } }) {
               <div className="relative w-full aspect-square overflow-hidden rounded-2xl border border-line bg-ink/5">
                 <Image
                   src={ref.src}
-                  alt={dict.references.captions[i] || ref.name}
+                  alt={dict.references.captions[i] || dict.references.gridLabels[i]}
                   fill
                   sizes="(min-width: 768px) 25vw, 50vw"
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <p className="mt-2 text-sm font-semibold text-ink">{ref.name}</p>
+              <p className="mt-2 text-sm font-semibold text-ink">{dict.references.gridLabels[i]}</p>
             </div>
           ))}
         </div>
@@ -384,6 +384,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
         <div className="mt-6 max-w-3xl">
           <ReferencesCarousel
             items={media.references.slice(1)}
+            labels={dict.references.gridLabels.slice(1)}
             captions={dict.references.captions.slice(1)}
             prevLabel={dict.references.prevLabel}
             nextLabel={dict.references.nextLabel}

@@ -6,14 +6,8 @@ export const media = {
   // Client's original flattened logo lockup (kept for reference / other uses)
   logoStacked: "/images/logo-stacked.png",
   homeHero: "/images/hero-taxi.png",
-  homeStory: "https://taxi-werbung.org/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-03-at-1.09.00-AM-1024x767.jpeg",
   homeFeature: "/images/feature-door-panel.png",
-  gallery: [
-    "https://taxi-werbung.org/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-03-at-1.06.26-AM.jpeg",
-    "https://taxi-werbung.org/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-03-at-1.06.56-AM-722x1024.jpeg",
-    "https://taxi-werbung.org/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-03-at-1.07.34-AM-778x1024.jpeg",
-  ],
-  aboutHero: "https://taxi-werbung.org/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-03-at-1.09.38-AM-768x576.jpeg",
+  aboutHero: "/images/references/installation-workshop.jpg",
   contactHero: "/images/references/umwelt-taxi.jpg",
 
   // Hero video (kept exactly as supplied by the client, no processing)

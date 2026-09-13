@@ -25,7 +25,7 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
       <div className="mt-10 relative w-full aspect-[16/9] max-w-3xl overflow-hidden rounded-3xl border border-line">
         <Image
           src={media.aboutHero}
-          alt="Über Taxi-Werbung.org"
+          alt={a.heroAlt}
           fill
           sizes="(min-width: 1024px) 720px, 90vw"
           className="object-cover"
