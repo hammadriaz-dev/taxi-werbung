@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import type { Dictionary } from "@/lib/dictionaries/de";
+import { privacySlug } from "@/lib/legal";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -83,7 +85,18 @@ export default function DualStudyRequestForm({
             </button>
           </form>
 
-          <p className="mt-4 text-xs font-medium text-ink/60">{g.footnote}</p>
+          <p className="mt-4 text-xs font-semibold text-ink/70">{g.footnote}</p>
+          <p className="mt-2 text-sm text-ink/80">
+            {g.privacyNote}{" "}
+            <Link
+              href={`/${locale}/${privacySlug(locale)}`}
+              target="_blank"
+              className="font-bold underline underline-offset-2 hover:text-inkSoft"
+            >
+              {g.privacyLinkText}
+            </Link>
+            .
+          </p>
         </div>
       )}
     </div>

@@ -160,8 +160,8 @@ const de = {
     successBody: "Die vollständige Studie öffnet sich in einem neuen Tab. Zusätzlich erhalten Sie in Kürze eine Kopie per E-Mail (ggf. im Spam-Ordner prüfen).",
     errorBody: "Da ist leider etwas schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@taxi-werbung.org.",
     required: "* Pflichtfeld",
-    privacyNote: "Ihre Daten werden ausschließlich zur Zusendung der Studie und für Rückfragen genutzt.",
-    privacyLinkText: "Datenschutzerklärung",
+    privacyNote: "Ihre Angaben nutzen wir nur zur Bearbeitung der Anfrage. Details:",
+    privacyLinkText: "Datenschutz",
     close: "Schließen",
     nextStepIntro: "Und jetzt zum nächsten Schritt:",
     nextStepLabel: "Kostenlose Kampagnenidee für mein Unternehmen erhalten",
@@ -178,7 +178,8 @@ const de = {
     submit: "Studien jetzt anfordern",
     sending: "Wird gesendet...",
     footnote: "Kostenlos und unverbindlich.",
-    privacyLinkText: "Datenschutzerklärung",
+    privacyNote: "Ihre Angaben nutzen wir nur zur Bearbeitung der Anfrage. Details:",
+    privacyLinkText: "Datenschutz",
     successTitle: "Vielen Dank!",
     successBody: "Beide Studien öffnen sich in neuen Tabs. Zusätzlich erhalten Sie in Kürze eine Kopie per E-Mail.",
     errorBody: "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@taxi-werbung.org.",
@@ -259,6 +260,12 @@ const de = {
       { brand: "Dresdner Morgenpost", agency: "Scholz and Friends" },
     ],
     otherBrands: ["Agfa", "Sanyo", "Panasonic", "NCR"],
+    ibmContext:
+      "Die Firma Taxi Media besteht seit 10 Jahren und hat eine große Zahl zufriedener Kunden. Zum Beispiel die Agentur Ogilvy and Mather, die für ihren Kunden IBM die Messewerbung auf Taxis schaltet.",
+    pressQuoteSource: "Fachzeitschrift HORIZONT, 1994",
+    pressQuoteHeading: "Höhere Kontaktchancen durch Mobilität",
+    pressQuoteText:
+      "... hat PT Werbung die Chancen dieses Werbeträgers erkannt. Heute gehören namhafte Unternehmen wie IBM oder Canon zur Klientel, die das Ergebnis einer Infratest-Studie durch die Praxis bestätigt sieht: Mobile Außenwerbung hat eine sieben Mal höhere Kontaktchance als standortgebunden Werbeträger.",
   },
   hallOfFame: {
     eyebrow: "HALL OF FAME",

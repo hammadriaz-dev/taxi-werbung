@@ -62,7 +62,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
 
           <div className="mt-9 flex flex-wrap gap-4">
             <a
-              href="mailto:info@taxi-werbung.org"
+              href="#contact-form"
               className="inline-flex items-center rounded-md sm:rounded-full bg-amber px-8 py-4 font-semibold text-ink hover:bg-amberDark transition-colors"
             >
               {dict.hero.ctaPrimary}
@@ -169,7 +169,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                 anfordern" splash graphic — the PNG itself is untouched, this only
                 adds a transparent mailto link positioned on top of the CTA area. */}
             <a
-              href="mailto:info@taxi-werbung.org"
+              href="#contact-form"
               aria-label={dict.urbanVisuals.ctaAriaEmail}
               className="absolute"
               style={{ left: "86%", top: "30.5%", width: "12.3%", height: "57.6%" }}
@@ -200,7 +200,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
             {/* Two clickable hotspots over this banner's own baked-in buttons —
                 the PNG itself is untouched. */}
             <a
-              href="mailto:info@taxi-werbung.org"
+              href="#contact-form"
               aria-label={dict.urbanVisuals.ctaAriaEmail}
               className="absolute"
               style={{ left: "5.3%", top: "81.5%", width: "23.2%", height: "12.7%" }}
@@ -429,6 +429,22 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                 {brand}
               </span>
             ))}
+          </div>
+
+          <p className="mt-6 max-w-2xl text-sm text-charcoal/70 leading-relaxed">
+            {dict.agencyHistory.ibmContext}
+          </p>
+
+          <div className="mt-8 max-w-2xl rounded-2xl border border-line bg-ink/[0.03] p-6 md:p-8">
+            <p className="text-xs font-bold uppercase tracking-[0.1em] text-charcoal/50">
+              {dict.agencyHistory.pressQuoteSource}
+            </p>
+            <p className="mt-3 font-display text-base font-bold text-ink">
+              „{dict.agencyHistory.pressQuoteHeading}"
+            </p>
+            <p className="mt-2 text-sm text-charcoal/75 leading-relaxed italic">
+              {dict.agencyHistory.pressQuoteText}
+            </p>
           </div>
         </div>
       </section>

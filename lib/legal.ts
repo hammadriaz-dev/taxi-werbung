@@ -17,7 +17,7 @@ const imprintDe: LegalPage = {
   metaTitle: "Impressum | Taxi-Werbung.org",
   metaDescription: "Impressum und Anbieterkennzeichnung von Taxi-Werbung.org gemäß § 5 DDG.",
   title: "Impressum",
-  updated: "Stand: Juli 2026",
+  updated: "Stand: September 2026",
   sections: [
     {
       heading: "Angaben gemäß § 5 DDG",
@@ -26,56 +26,20 @@ const imprintDe: LegalPage = {
         "Bultmannsort 55",
         "49453 Wetschen",
         "Deutschland",
-      ],
-    },
-    {
-      heading: "Vertreten durch",
-      paragraphs: ["Detlef Zeich (Geschäftsführer)"],
-    },
-    {
-      heading: "Ansprechpartner Werbeflächenvermietung",
-      paragraphs: ["Ralf Klimmeck", "Telefon: 0201 – 830 34 15"],
-    },
-    {
-      heading: "Kontakt",
-      paragraphs: [
-        "Telefon: +49 152 58 565 656",
+        "Vertreten durch: Detlef Zeich (Geschäftsführer)",
+        "Telefon: 015258565656",
         "E-Mail: info@taxi-werbung.org",
         "Internet: https://taxi-werbung.org",
-      ],
-    },
-    {
-      heading: "Registereintrag",
-      paragraphs: ["Registergericht: Amtsgericht Walsrode", "Registernummer: HRB 209818"],
-    },
-    {
-      heading: "Umsatzsteuer-ID",
-      paragraphs: [
-        "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE348414485",
+        "Für weitere Informationen: info@taxi-werbung.org",
+        "Das Marketing dieser Website wird über taxi-werbung.org geführt.",
+        "Registergericht: Amtsgericht Walsrode",
+        "Registernummer: HRB 209818",
+        "Umsatzsteuer-ID: DE348414485",
       ],
     },
     {
       heading: "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
-      paragraphs: ["Detlef Zeich", "Bultmannsort 55, 49453 Wetschen, Deutschland"],
-    },
-    {
-      heading: "Haftung für Inhalte",
-      paragraphs: [
-        "Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.",
-        "Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden entsprechender Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.",
-      ],
-    },
-    {
-      heading: "Haftung für Links",
-      paragraphs: [
-        "Unser Angebot enthält gegebenenfalls Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.",
-      ],
-    },
-    {
-      heading: "Urheberrecht",
-      paragraphs: [
-        "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.",
-      ],
+      paragraphs: ["Detlef Zeich, Bultmannsort 55, 49453 Wetschen"],
     },
   ],
 };
@@ -84,7 +48,7 @@ const imprintEn: LegalPage = {
   metaTitle: "Imprint | Taxi-Werbung.org",
   metaDescription: "Legal notice (Impressum) for Taxi-Werbung.org, as required under German law (§ 5 DDG).",
   title: "Imprint",
-  updated: "Last updated: July 2026",
+  updated: "Last updated: September 2026",
   translationNote:
     "This is a courtesy English translation. The German version is the legally binding one.",
   sections: [
@@ -95,37 +59,20 @@ const imprintEn: LegalPage = {
         "Bultmannsort 55",
         "49453 Wetschen",
         "Germany",
-      ],
-    },
-    {
-      heading: "Represented by",
-      paragraphs: ["Detlef Zeich (Managing Director)"],
-    },
-    {
-      heading: "Contact person for advertising space rental",
-      paragraphs: ["Ralf Klimmeck", "Phone: 0201 – 830 34 15"],
-    },
-    {
-      heading: "Contact",
-      paragraphs: [
-        "Phone: +49 152 58 565 656",
+        "Represented by: Detlef Zeich (Managing Director)",
+        "Phone: 015258565656",
         "Email: info@taxi-werbung.org",
         "Website: https://taxi-werbung.org",
-      ],
-    },
-    {
-      heading: "Commercial register entry",
-      paragraphs: ["Register court: Amtsgericht Walsrode", "Register number: HRB 209818"],
-    },
-    {
-      heading: "VAT ID",
-      paragraphs: [
-        "VAT identification number pursuant to § 27a of the German VAT Act: DE348414485",
+        "For further information: info@taxi-werbung.org",
+        "Marketing for this website is managed via taxi-werbung.org.",
+        "Register court: Amtsgericht Walsrode",
+        "Register number: HRB 209818",
+        "VAT ID: DE348414485",
       ],
     },
     {
       heading: "Responsible for content pursuant to § 18 (2) MStV",
-      paragraphs: ["Detlef Zeich", "Bultmannsort 55, 49453 Wetschen, Germany"],
+      paragraphs: ["Detlef Zeich, Bultmannsort 55, 49453 Wetschen"],
     },
   ],
 };

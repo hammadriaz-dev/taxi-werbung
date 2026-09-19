@@ -162,8 +162,8 @@ const en: Dictionary = {
     successBody: "The complete study is opening in a new tab. You'll also receive a copy by email shortly (check your spam folder just in case).",
     errorBody: "Something went wrong. Please try again or email us directly at info@taxi-werbung.org.",
     required: "* Required",
-    privacyNote: "Your details are used only to send you the study and for follow-up questions.",
-    privacyLinkText: "privacy policy",
+    privacyNote: "We only use your details to process your request. Details:",
+    privacyLinkText: "Privacy Policy",
     close: "Close",
     nextStepIntro: "And now for the next step:",
     nextStepLabel: "Get a free campaign idea for my company",
@@ -180,7 +180,8 @@ const en: Dictionary = {
     submit: "Request Studies Now",
     sending: "Sending...",
     footnote: "Free and non-binding.",
-    privacyLinkText: "privacy policy",
+    privacyNote: "We only use your details to process your request. Details:",
+    privacyLinkText: "Privacy Policy",
     successTitle: "Thank you!",
     successBody: "Both studies are opening in new tabs. You'll also receive a copy by email shortly.",
     errorBody: "Something went wrong. Please try again or email us directly at info@taxi-werbung.org.",
@@ -261,6 +262,12 @@ const en: Dictionary = {
       { brand: "Dresdner Morgenpost", agency: "Scholz and Friends" },
     ],
     otherBrands: ["Agfa", "Sanyo", "Panasonic", "NCR"],
+    ibmContext:
+      "Taxi Media has been in business for 10 years and has a large number of satisfied clients. For example, the agency Ogilvy and Mather, which books trade-fair advertising on taxis for its client IBM.",
+    pressQuoteSource: "HORIZONT trade magazine, 1994",
+    pressQuoteHeading: "Higher Contact Chances Through Mobility",
+    pressQuoteText:
+      "... PT Werbung recognized the potential of this advertising medium. Today, well-known companies such as IBM or Canon are among its clients, who see the results of an Infratest study confirmed in practice: mobile outdoor advertising has a seven times higher contact rate than stationary advertising media.",
   },
   hallOfFame: {
     eyebrow: "HALL OF FAME",

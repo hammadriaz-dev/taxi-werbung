@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import type { Dictionary } from "@/lib/dictionaries/de";
+import { privacySlug } from "@/lib/legal";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -169,8 +171,17 @@ export default function StudyRequestModal({
                     {status === "sending" ? g.sending : g.submit}
                   </button>
 
-                  <p className="text-center text-xs text-charcoal/45">
-                    {g.required} — {g.privacyNote}
+                  <p className="text-center text-xs text-charcoal/50">{g.required}</p>
+                  <p className="text-center text-sm text-charcoal/70">
+                    {g.privacyNote}{" "}
+                    <Link
+                      href={`/${locale}/${privacySlug(locale)}`}
+                      target="_blank"
+                      className="font-semibold text-ink underline underline-offset-2 hover:text-amberDark"
+                    >
+                      {g.privacyLinkText}
+                    </Link>
+                    .
                   </p>
                 </form>
               </>

@@ -131,7 +131,7 @@ export default function FebrezeStudyPage({ params }: { params: { locale: string 
         </p>
         <p className="mt-2 font-display text-xl md:text-2xl font-bold text-cream">{s.ctaText}</p>
         <a
-          href="mailto:info@taxi-werbung.org"
+          href={`/${locale}/contact`}
           className="mt-6 inline-flex items-center rounded-full border border-cream/30 px-7 py-3 text-sm font-semibold text-cream hover:bg-cream/10 transition-colors"
         >
           {dict.hero.ctaPrimary}
