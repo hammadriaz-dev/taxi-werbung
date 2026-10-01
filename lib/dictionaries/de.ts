@@ -100,7 +100,7 @@ const de = {
       imageCaption: "Taxiwerbung für porta Möbel & Mehr in Berlin und Potsdam",
       bodyParagraphs: [
         "porta Möbel & Mehr, der Möbelgigant in Potsdam, wirbt seit Jahren erfolgreich mit großflächiger Taxiwerbung in Berlin und Brandenburg – sichtbar im gesamten Stadtgebiet, bei Tag und bei Nacht.",
-        "Die zugrunde liegende Verbraucherbefragung wurde im November/Dezember 2016 in Köln durchgeführt, wo porta! ebenfalls mit mehreren Standorten präsent ist. Die Studie der Hochschule Fresenius im Auftrag von TAXI media wurde im Januar 2017 veröffentlicht.",
+        "Die zugrunde liegende Verbraucherbefragung wurde im November/Dezember 2016 in Köln durchgeführt, wo porta! ebenfalls mit mehreren Standorten präsent ist. Die Studie der Hochschule Fresenius im Auftrag von Taxi-Werbung.org wurde im Januar 2017 veröffentlicht.",
       ],
       basicsHeading: "Grundlage der Studie",
       basicsItems: [
@@ -138,7 +138,7 @@ const de = {
         "Taxiwerbung wird insgesamt als unaufdringlich wahrgenommen",
       ],
       sourceLine:
-        "Quelle: Hochschule Fresenius – „Werbewirkung von Werbung auf Taxis – vorrangig in Bezug auf porta!“, Studie im Auftrag von TAXI media, 16. Januar 2017 (Melanie Daniel, Angelina Fröhlich, Cedric Kudella, Eva Nübold, Jana Sienz).",
+        "Quelle: Hochschule Fresenius – „Werbewirkung von Werbung auf Taxis – vorrangig in Bezug auf porta!“, Studie im Auftrag von Taxi-Werbung.org, 16. Januar 2017 (Melanie Daniel, Angelina Fröhlich, Cedric Kudella, Eva Nübold, Jana Sienz).",
       lockedBullets: [
         "Alle Original-Kennzahlen der Studie (84,7 % gestützte Markenbekanntheit)",
         "Grafische Auswertung nach Zeitraum (89,2 % korrekte Werbe-Zuordnung)",
@@ -248,24 +248,6 @@ const de = {
   clientsIntro: {
     title: "Unsere Kunden. Unsere Kampagnen. Wissenschaftlich untersuchte Werbewirkung.",
     body: "Procter & Gamble mit Febreze und porta! Möbel stehen beispielhaft für zahlreiche bekannte Unternehmen und Marken, für die wir Taxiwerbekampagnen realisiert haben. Die Untersuchungen von AC Nielsen und der Hochschule Fresenius belegen zusätzlich die Wirkung dieser Kampagnen.",
-  },
-  agencyHistory: {
-    eyebrow: "AGENTUR-HISTORIE",
-    title: "Dokumentierte Agentur- und Unternehmensbeziehungen",
-    body: "Über die Jahrzehnte haben wir mit renommierten Werbeagenturen und deren Kunden zusammengearbeitet. Diese Zusammenarbeit ist dokumentiert:",
-    pairs: [
-      { brand: "IBM", agency: "Ogilvy and Mather" },
-      { brand: "Mitsubishi Electronics", agency: "Martin, Brandt und Partner" },
-      { brand: "Electrolux", agency: "Young and Rubicam" },
-      { brand: "Dresdner Morgenpost", agency: "Scholz and Friends" },
-    ],
-    otherBrands: ["Agfa", "Sanyo", "Panasonic", "NCR"],
-    ibmContext:
-      "Die Firma Taxi Media besteht seit 10 Jahren und hat eine große Zahl zufriedener Kunden. Zum Beispiel die Agentur Ogilvy and Mather, die für ihren Kunden IBM die Messewerbung auf Taxis schaltet.",
-    pressQuoteSource: "Fachzeitschrift HORIZONT, 1994",
-    pressQuoteHeading: "Höhere Kontaktchancen durch Mobilität",
-    pressQuoteText:
-      "... hat PT Werbung die Chancen dieses Werbeträgers erkannt. Heute gehören namhafte Unternehmen wie IBM oder Canon zur Klientel, die das Ergebnis einer Infratest-Studie durch die Praxis bestätigt sieht: Mobile Außenwerbung hat eine sieben Mal höhere Kontaktchance als standortgebunden Werbeträger.",
   },
   hallOfFame: {
     eyebrow: "HALL OF FAME",
@@ -412,7 +394,7 @@ const de = {
     heroAlt: "Team von Taxi-Werbung.org bei der Montage einer Taxiwerbekampagne",
     lead: "Revolutioniert Taxiwerbung.",
     body1:
-      "Taxi-Werbung.org begleitet Werbekampagnen von der ersten Idee über Beratung und Konzeption bis zur erfolgreichen Umsetzung. Für die Realisierung der Kampagnen arbeitet Taxi-Werbung.org projektbezogen mit taxi media zusammen.",
+      "Taxi-Werbung.org begleitet Werbekampagnen von der ersten Idee über Beratung und Konzeption bis zur erfolgreichen Umsetzung.",
     list: [
       "Das Konzept ist einfach, aber wirkungsvoll: Wir arbeiten mit Taxiflotten und Fahrern zusammen und stellen ihnen professionell gestaltete Werbung für ihre Türen zur Verfügung – für lokale Betriebe ebenso wie für nationale Kampagnen.",
       "Wir sprechen gezielt Bevölkerungsgruppen und geografische Gebiete an, indem wir Werbung auf Taxis platzieren, die bestimmte Stadtteile oder Routen anfahren.",

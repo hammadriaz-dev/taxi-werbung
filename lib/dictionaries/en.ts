@@ -102,7 +102,7 @@ const en: Dictionary = {
       imageCaption: "Taxi advertising for porta Möbel & Mehr in Berlin and Potsdam",
       bodyParagraphs: [
         "porta Möbel & Mehr, the furniture giant in Potsdam, has advertised successfully with large-format taxi campaigns across Berlin and Brandenburg for years — visible citywide, day and night.",
-        "The underlying consumer survey was conducted in November/December 2016 in Cologne, where porta! also operates several locations. The Hochschule Fresenius study, commissioned by TAXI media, was published in January 2017.",
+        "The underlying consumer survey was conducted in November/December 2016 in Cologne, where porta! also operates several locations. The Hochschule Fresenius study, commissioned by Taxi-Werbung.org, was published in January 2017.",
       ],
       basicsHeading: "Study Basis",
       basicsItems: [
@@ -140,7 +140,7 @@ const en: Dictionary = {
         "Taxi advertising is perceived overall as unobtrusive",
       ],
       sourceLine:
-        "Source: Hochschule Fresenius – “Advertising Impact of Taxi Advertising – with a Focus on porta!”, study commissioned by TAXI media, January 16, 2017 (Melanie Daniel, Angelina Fröhlich, Cedric Kudella, Eva Nübold, Jana Sienz).",
+        "Source: Hochschule Fresenius – “Advertising Impact of Taxi Advertising – with a Focus on porta!”, study commissioned by Taxi-Werbung.org, January 16, 2017 (Melanie Daniel, Angelina Fröhlich, Cedric Kudella, Eva Nübold, Jana Sienz).",
       lockedBullets: [
         "All original study metrics (84.7% aided brand awareness)",
         "Chart breakdown by period (89.2% correct ad attribution)",
@@ -250,24 +250,6 @@ const en: Dictionary = {
   clientsIntro: {
     title: "Our clients. Our campaigns. Scientifically studied advertising impact.",
     body: "Procter & Gamble with Febreze and porta! Möbel represent the many well-known companies and brands for which we have delivered taxi advertising campaigns. The studies by AC Nielsen and Hochschule Fresenius provide additional evidence of the impact of these campaigns.",
-  },
-  agencyHistory: {
-    eyebrow: "AGENCY HISTORY",
-    title: "Documented Agency and Company Relationships",
-    body: "Over the decades we have worked with renowned advertising agencies and their clients. This collaboration is documented:",
-    pairs: [
-      { brand: "IBM", agency: "Ogilvy and Mather" },
-      { brand: "Mitsubishi Electronics", agency: "Martin, Brandt und Partner" },
-      { brand: "Electrolux", agency: "Young and Rubicam" },
-      { brand: "Dresdner Morgenpost", agency: "Scholz and Friends" },
-    ],
-    otherBrands: ["Agfa", "Sanyo", "Panasonic", "NCR"],
-    ibmContext:
-      "Taxi Media has been in business for 10 years and has a large number of satisfied clients. For example, the agency Ogilvy and Mather, which books trade-fair advertising on taxis for its client IBM.",
-    pressQuoteSource: "HORIZONT trade magazine, 1994",
-    pressQuoteHeading: "Higher Contact Chances Through Mobility",
-    pressQuoteText:
-      "... PT Werbung recognized the potential of this advertising medium. Today, well-known companies such as IBM or Canon are among its clients, who see the results of an Infratest study confirmed in practice: mobile outdoor advertising has a seven times higher contact rate than stationary advertising media.",
   },
   hallOfFame: {
     eyebrow: "HALL OF FAME",
@@ -414,7 +396,7 @@ const en: Dictionary = {
     heroAlt: "Taxi-Werbung.org team installing a taxi advertising campaign",
     lead: "Revolutionizing taxi advertising.",
     body1:
-      "Taxi-Werbung.org supports advertising campaigns from the first idea through consulting and concept development to successful execution. For the realization of campaigns, Taxi-Werbung.org partners with taxi media on a project basis.",
+      "Taxi-Werbung.org supports advertising campaigns from the first idea through consulting and concept development to successful execution.",
     list: [
       "The concept is simple but effective: we work with taxi fleets and drivers, supplying them with professionally designed advertising for their doors — for local businesses and national campaigns alike.",
       "We target specific demographics and geographic areas by placing ads on taxis that run particular neighborhoods or routes.",

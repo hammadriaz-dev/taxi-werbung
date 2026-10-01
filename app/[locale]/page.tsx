@@ -392,63 +392,6 @@ export default function HomePage({ params }: { params: { locale: string } }) {
         </div>
       </section>
 
-      {/* Historical References & Client Quotes — Ogilvy & Mather / IBM, Martin,
-          Brandt und Partner / Mitsubishi Electronics, Young & Rubicam / Electrolux,
-          Scholz & Friends / Dresdner Morgenpost, plus Agfa, Sanyo, Panasonic, NCR.
-          Verbatim quotes for the 5 named clients live in dict.hallOfFame below;
-          this block documents the wider historical agency/brand relationships that
-          have no surviving photo or quote text. */}
-      <section className="bg-white border-y border-line">
-        <div className="max-w-content mx-auto px-5 md:px-8 py-16 md:py-24">
-          <span className="inline-flex items-center rounded-full bg-amberDark/10 border border-amberDark/30 px-4 py-1.5 text-xs md:text-sm font-bold uppercase tracking-[0.15em] text-amberDark">
-            {dict.agencyHistory.eyebrow}
-          </span>
-          <h2 className="mt-4 max-w-2xl font-display text-2xl md:text-3xl font-bold text-ink">
-            {dict.agencyHistory.title}
-          </h2>
-          <p className="mt-4 max-w-2xl text-charcoal/75 leading-relaxed">{dict.agencyHistory.body}</p>
-
-          <div className="mt-8 grid gap-3 sm:grid-cols-2">
-            {dict.agencyHistory.pairs.map((pair) => (
-              <div
-                key={pair.brand}
-                className="flex items-center justify-between gap-3 rounded-xl border border-line bg-cream/30 px-5 py-3.5"
-              >
-                <span className="font-display font-bold text-ink">{pair.brand}</span>
-                <span className="text-sm text-charcoal/60">{pair.agency}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-6 flex flex-wrap gap-2.5">
-            {dict.agencyHistory.otherBrands.map((brand) => (
-              <span
-                key={brand}
-                className="inline-flex items-center rounded-full bg-ink/[0.04] border border-line px-4 py-1.5 text-sm font-semibold text-ink"
-              >
-                {brand}
-              </span>
-            ))}
-          </div>
-
-          <p className="mt-6 max-w-2xl text-sm text-charcoal/70 leading-relaxed">
-            {dict.agencyHistory.ibmContext}
-          </p>
-
-          <div className="mt-8 max-w-2xl rounded-2xl border border-line bg-ink/[0.03] p-6 md:p-8">
-            <p className="text-xs font-bold uppercase tracking-[0.1em] text-charcoal/50">
-              {dict.agencyHistory.pressQuoteSource}
-            </p>
-            <p className="mt-3 font-display text-base font-bold text-ink">
-              „{dict.agencyHistory.pressQuoteHeading}"
-            </p>
-            <p className="mt-2 text-sm text-charcoal/75 leading-relaxed italic">
-              {dict.agencyHistory.pressQuoteText}
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Process — "how to get a campaign of your own", right after the references,
           per client's explicit request: this is the practical follow-up once
           interest is established. */}
