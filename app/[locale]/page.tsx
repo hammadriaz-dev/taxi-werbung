@@ -75,6 +75,81 @@ export default function HomePage({ params }: { params: { locale: string } }) {
         </div>
       </section>
 
+      {/* Unsere Kunden — directly below the hero, per client's request: all client
+          names large on the dark background, then the Hall of Fame heading, intro
+          and quote cards (moved here from the bottom of the page, not copied).
+          Placeholder quote entries (containing "BENÖTIGT" / "NEEDED") stay hidden. */}
+      <section className="bg-ink border-b border-cream/10">
+        <div className="max-w-content mx-auto px-5 md:px-8 py-16 md:py-24">
+          <h2 className="font-display text-3xl md:text-5xl font-extrabold text-amber">
+            {dict.ourClients.title}
+          </h2>
+          <ul className="mt-10 flex flex-wrap gap-x-8 gap-y-4 md:gap-x-12 md:gap-y-5">
+            {dict.ourClients.names.map((name) => (
+              <li
+                key={name}
+                className="font-display text-2xl md:text-4xl font-bold leading-tight text-white"
+              >
+                {name}
+              </li>
+            ))}
+          </ul>
+
+          {(() => {
+            const isPlaceholder = (s: string) => s.includes("BENÖTIGT") || s.includes("NEEDED");
+            const realQuotes = dict.hallOfFame.quotes.filter((q) => !isPlaceholder(q.quote));
+            const hasMitsubishi = !isPlaceholder(dict.hallOfFame.mitsubishiBody);
+            if (realQuotes.length === 0 && !hasMitsubishi) return null;
+
+            return (
+              <div className="mt-16 md:mt-20 border-t border-cream/15 pt-12 md:pt-16">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="inline-flex items-center rounded-full bg-amber/15 border border-amber/40 px-4 py-1.5 text-xs md:text-sm font-bold uppercase tracking-[0.15em] text-amber">
+                    {dict.hallOfFame.eyebrow}
+                  </span>
+                  <span className="inline-flex items-center rounded-full bg-cream/10 border border-cream/25 px-3.5 py-1.5 text-xs font-semibold text-cream/80">
+                    {dict.hallOfFame.periodBadge}
+                  </span>
+                </div>
+                <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold text-cream">
+                  {dict.hallOfFame.title}
+                </h2>
+                <p className="mt-5 max-w-2xl text-cream/70 leading-relaxed">{dict.hallOfFame.intro}</p>
+
+                {realQuotes.length > 0 && (
+                  <div className="mt-12 grid gap-6 sm:grid-cols-2">
+                    {realQuotes.map((q) => (
+                      <div
+                        key={q.company}
+                        className="rounded-2xl border border-cream/15 bg-white/[0.04] p-6 md:p-8"
+                      >
+                        <p className="font-display text-lg font-bold text-cream">{q.company}</p>
+                        <p className="mt-3 text-lg leading-relaxed text-cream italic">"{q.quote}"</p>
+                        <p className="mt-4 text-sm text-gray-300">{q.author}</p>
+                        <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-amber/70">
+                          {dict.hallOfFame.periodBadge}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {hasMitsubishi && (
+                  <div className="mt-6 rounded-2xl border border-amber/25 bg-amber/[0.06] p-6 md:p-8">
+                    <p className="font-display text-lg font-bold text-cream">
+                      {dict.hallOfFame.mitsubishiHeading}
+                    </p>
+                    <p className="mt-3 text-sm text-cream/70 leading-relaxed">
+                      {dict.hallOfFame.mitsubishiBody}
+                    </p>
+                  </div>
+                )}
+              </div>
+            );
+          })()}
+        </div>
+      </section>
+
       {/* "Making of" — real installation photo, directly below the hero video +
           overlay CTA. This is the proof-of-execution beat: right after the
           emotional video, show that real campaigns actually get built. */}
@@ -88,21 +163,21 @@ export default function HomePage({ params }: { params: { locale: string } }) {
           </h2>
           <p className="mt-5 max-w-2xl text-charcoal/75 leading-relaxed">{dict.makingOf.body}</p>
 
-          <div className="relative mt-10 w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-3xl">
-            <Image
-              src={media.references.find((r) => r.name === "Kampagnen-Installation")?.src || media.references[10].src}
-              alt={dict.makingOf.imageAlt}
-              fill
-              sizes="100vw"
-              className="object-cover"
-              priority
-            />
-            <div className="absolute left-4 bottom-4 md:left-6 md:bottom-6 rounded-xl bg-ink/90 px-4 py-3 md:px-5 md:py-4">
-              <p className="font-display text-sm md:text-base font-bold text-amber leading-snug">
-                {dict.makingOf.imageBadge}
-              </p>
+          <figure className="mt-10">
+            <div className="relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-3xl">
+              <Image
+                src={media.references.find((r) => r.name === "Kampagnen-Installation")?.src || media.references[10].src}
+                alt={dict.makingOf.imageAlt}
+                fill
+                sizes="100vw"
+                className="object-cover"
+                priority
+              />
             </div>
-          </div>
+            <figcaption className="mt-3 font-display text-sm md:text-base font-bold text-amberDark leading-snug">
+              {dict.makingOf.imageBadge}
+            </figcaption>
+          </figure>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
             {dict.makingOf.points.map((point, i) => {
@@ -330,18 +405,25 @@ export default function HomePage({ params }: { params: { locale: string } }) {
           {dict.references.featuredBody}
         </p>
 
-        <div className="relative mt-8 w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-3xl">
-          <Image
-            src={media.references[0].src}
-            alt={dict.references.gridLabels[0]}
-            fill
-            sizes="100vw"
-            className="object-cover"
-          />
-          <span className="absolute right-4 top-4 rounded-full bg-amber px-4 py-1.5 text-xs font-bold uppercase tracking-[0.1em] text-ink">
-            {dict.references.featuredBadge}
-          </span>
-        </div>
+        <figure className="mt-8">
+          <div className="relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-3xl">
+            <Image
+              src={media.references[0].src}
+              alt={dict.references.gridLabels[0]}
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+          </div>
+          <figcaption className="mt-3 flex flex-wrap items-center gap-3">
+            <span className="font-display text-base md:text-lg font-bold text-ink">
+              {dict.references.gridLabels[0]}
+            </span>
+            <span className="rounded-full bg-amber px-4 py-1.5 text-xs font-bold uppercase tracking-[0.1em] text-ink">
+              {dict.references.featuredBadge}
+            </span>
+          </figcaption>
+        </figure>
 
         <div className="mt-5 flex flex-wrap gap-3">
           {dict.references.featuredTags.map((tag) => (
@@ -469,7 +551,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
       </section>
 
       {/* "Our clients, our campaigns" intro — bridges the two named studies and the
-          Hall of Fame testimonials below */}
+          Hall of Fame testimonials (now in "Unsere Kunden" at the top) */}
       <section className="max-w-content mx-auto px-5 md:px-8 py-16 md:py-24 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="font-display text-2xl md:text-3xl font-bold text-ink">
@@ -478,67 +560,6 @@ export default function HomePage({ params }: { params: { locale: string } }) {
           <p className="mt-5 text-charcoal/75 leading-relaxed">{dict.clientsIntro.body}</p>
         </div>
       </section>
-
-      {/* Hall of Fame — customer testimonials. Quote text for SAS Hotel Nürnberg, IBM,
-          Salamander and Zentis, and the Mitsubishi Electronics success story, have not
-          been supplied yet. Placeholder entries are filtered out here rather than
-          shown to visitors — nothing renders until real content replaces them in the
-          dictionary (search for "BENÖTIGT" / "NEEDED"). The whole section stays
-          hidden until at least one real quote or the Mitsubishi story exists. */}
-      {(() => {
-        const isPlaceholder = (s: string) => s.includes("BENÖTIGT") || s.includes("NEEDED");
-        const realQuotes = dict.hallOfFame.quotes.filter((q) => !isPlaceholder(q.quote));
-        const hasMitsubishi = !isPlaceholder(dict.hallOfFame.mitsubishiBody);
-        if (realQuotes.length === 0 && !hasMitsubishi) return null;
-
-        return (
-          <section className="bg-ink">
-            <div className="max-w-content mx-auto px-5 md:px-8 py-16 md:py-24">
-              <div className="flex flex-wrap items-center gap-3">
-                <span className="inline-flex items-center rounded-full bg-amber/15 border border-amber/40 px-4 py-1.5 text-xs md:text-sm font-bold uppercase tracking-[0.15em] text-amber">
-                  {dict.hallOfFame.eyebrow}
-                </span>
-                <span className="inline-flex items-center rounded-full bg-cream/10 border border-cream/25 px-3.5 py-1.5 text-xs font-semibold text-cream/80">
-                  {dict.hallOfFame.periodBadge}
-                </span>
-              </div>
-              <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold text-cream">
-                {dict.hallOfFame.title}
-              </h2>
-              <p className="mt-5 max-w-2xl text-cream/70 leading-relaxed">{dict.hallOfFame.intro}</p>
-
-              {realQuotes.length > 0 && (
-                <div className="mt-12 grid gap-6 sm:grid-cols-2">
-                  {realQuotes.map((q) => (
-                    <div
-                      key={q.company}
-                      className="rounded-2xl border border-cream/15 bg-white/[0.04] p-6 md:p-8"
-                    >
-                      <p className="text-lg leading-relaxed text-cream italic">"{q.quote}"</p>
-                      <p className="mt-4 font-display font-bold text-cream">{q.author}</p>
-                      <p className="text-sm text-cream/50">{q.company}</p>
-                      <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-amber/70">
-                        {dict.hallOfFame.periodBadge}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {hasMitsubishi && (
-                <div className="mt-6 rounded-2xl border border-amber/25 bg-amber/[0.06] p-6 md:p-8">
-                  <p className="font-display text-lg font-bold text-cream">
-                    {dict.hallOfFame.mitsubishiHeading}
-                  </p>
-                  <p className="mt-3 text-sm text-cream/70 leading-relaxed">
-                    {dict.hallOfFame.mitsubishiBody}
-                  </p>
-                </div>
-              )}
-            </div>
-          </section>
-        );
-      })()}
 
       {/* Contact form — the single conversion point of the page: no competing links,
           no extra fields, just the pitch and the form. */}

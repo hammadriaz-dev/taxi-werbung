@@ -22,16 +22,21 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
       <h1 className="mt-3 font-display text-4xl md:text-5xl font-extrabold text-ink">{a.heading}</h1>
       <p className="mt-2 font-display text-xl md:text-2xl font-bold text-ink/70">{a.lead}</p>
 
-      <div className="mt-10 relative w-full aspect-[16/9] max-w-3xl overflow-hidden rounded-3xl border border-line">
-        <Image
-          src={media.aboutHero}
-          alt={a.heroAlt}
-          fill
-          sizes="(min-width: 1024px) 720px, 90vw"
-          className="object-cover"
-          priority
-        />
-      </div>
+      <figure className="mt-10 max-w-3xl">
+        <div className="relative w-full aspect-[16/9] overflow-hidden rounded-3xl border border-line">
+          <Image
+            src={media.aboutHero}
+            alt={a.heroAlt}
+            fill
+            sizes="(min-width: 1024px) 720px, 90vw"
+            className="object-cover"
+            priority
+          />
+        </div>
+        <figcaption className="mt-3 text-sm font-semibold text-ink">
+          {dict.references.gridLabels[10]}
+        </figcaption>
+      </figure>
 
       <div className="mt-10 grid gap-12 lg:grid-cols-[1.3fr_0.7fr]">
         <div className="space-y-5 text-charcoal/80 leading-relaxed">

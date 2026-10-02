@@ -40,15 +40,20 @@ export default function ReferenceClients({
               key={client.name}
               className="grid overflow-hidden rounded-3xl border border-line bg-cream/30 shadow-sm hover:shadow-lg transition-shadow md:grid-cols-2"
             >
-              <div className="relative w-full aspect-[4/3] md:aspect-auto bg-ink/5">
-                <Image
-                  src={client.campaignImage}
-                  alt={client.campaignImageAlt}
-                  fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
+              <figure className="flex flex-col bg-ink/5">
+                <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 md:min-h-[320px]">
+                  <Image
+                    src={client.campaignImage}
+                    alt={client.campaignImageAlt}
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="border-t border-line bg-white px-5 py-3 text-sm font-semibold text-ink">
+                  {client.name}
+                </figcaption>
+              </figure>
 
               <div className="p-6 md:p-8 flex flex-col justify-center">
                 <div className="inline-flex w-fit items-center rounded-lg bg-white border border-line px-3 py-1.5 font-display text-sm font-extrabold tracking-tight text-ink shadow-sm">

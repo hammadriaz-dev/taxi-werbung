@@ -22,16 +22,21 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
     <section className="max-w-content mx-auto px-5 md:px-8 py-16 md:py-24">
       <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-3xl border border-line mb-8">
-            <Image
-              src={media.contactHero}
-              alt={c.heroAlt}
-              fill
-              sizes="(min-width: 1024px) 480px, 90vw"
-              className="object-cover"
-              priority
-            />
-          </div>
+          <figure className="mb-8">
+            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-3xl border border-line">
+              <Image
+                src={media.contactHero}
+                alt={c.heroAlt}
+                fill
+                sizes="(min-width: 1024px) 480px, 90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <figcaption className="mt-3 text-sm font-semibold text-ink">
+              {dict.references.gridLabels[9]}
+            </figcaption>
+          </figure>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-amberDark">{c.kicker}</p>
           <h1 className="mt-3 font-display text-4xl md:text-5xl font-extrabold text-ink">{c.heading}</h1>
           <p className="mt-4 max-w-md text-charcoal/75 leading-relaxed">{c.intro}</p>
