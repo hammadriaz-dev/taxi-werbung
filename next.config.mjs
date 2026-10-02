@@ -10,6 +10,19 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // One privacy-policy address everywhere: /de/privacy (and /en/privacy).
+      // The old /datenschutz URL redirects permanently so existing links and
+      // search results keep working.
+      {
+        source: "/:locale(de|en)/datenschutz",
+        destination: "/:locale/privacy",
+        permanent: true,
+      },
+      {
+        source: "/datenschutz",
+        destination: "/de/privacy",
+        permanent: true,
+      },
       {
         source: "/",
         destination: "/de",

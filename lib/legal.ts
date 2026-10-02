@@ -333,10 +333,6 @@ const privacyEn: LegalPage = {
   ],
 };
 
-export function privacySlug(locale: string): string {
-  return locale === "de" ? "datenschutz" : "privacy";
-}
-
 export function getImprint(locale: string): LegalPage {
   return locale === "en" ? imprintEn : imprintDe;
 }

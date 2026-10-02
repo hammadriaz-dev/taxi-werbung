@@ -49,7 +49,7 @@ const de = {
       subtitle: "Unabhängige Studien. Starke Marken. Nachweisbare Ergebnisse.",
       clientHeading: "Procter & Gamble – Febreze",
       clientSubheading: "Produktlaunch 1999 – wissenschaftlich gemessen von AC Nielsen",
-      imageCaption: "Originalfoto der Febreze-Taxiwerbung, Deutschland 1999",
+      imageCaption: "Originalfoto der Febreze-Taxiwerbung, Deutschland",
       bodyParagraphs: [
         "Für den Produktlaunch von Febreze entschied sich Procter & Gamble bewusst für eine klassische Taxiwerbung auf den Seitentüren – keine auffällige Sonderlösung.",
         "Ziel war es, die Wirkung dieses Werbemediums unter realen Marktbedingungen wissenschaftlich überprüfen zu lassen. Mit der Erfolgsmessung wurde die AC Nielsen GmbH beauftragt.",
@@ -201,7 +201,7 @@ const de = {
       {
         logoText: "P&G",
         name: "Procter & Gamble – Febreze",
-        campaignImageAlt: "Originalfoto der Febreze-Taxiwerbung, Deutschland 1999",
+        campaignImageAlt: "Originalfoto der Febreze-Taxiwerbung, Deutschland",
         description:
           "Für den Produktlaunch von Febreze setzte Procter & Gamble auf klassische Taxiwerbung auf den Seitentüren. Die Kampagne lief bundesweit und war Teil der Markteinführungsstrategie für das Produkt in Deutschland.",
         facts: [

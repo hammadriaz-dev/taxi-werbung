@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import type { Dictionary } from "@/lib/dictionaries/de";
-import { privacySlug } from "@/lib/legal";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -175,7 +174,7 @@ export default function StudyRequestModal({
                   <p className="text-center text-sm text-charcoal/70">
                     {g.privacyNote}{" "}
                     <Link
-                      href={`/${locale}/${privacySlug(locale)}`}
+                      href={`/${locale}/privacy`}
                       target="_blank"
                       className="font-semibold text-ink underline underline-offset-2 hover:text-amberDark"
                     >

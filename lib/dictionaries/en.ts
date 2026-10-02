@@ -51,7 +51,7 @@ const en: Dictionary = {
       subtitle: "Independent studies. Strong brands. Measurable results.",
       clientHeading: "Procter & Gamble – Febreze",
       clientSubheading: "1999 product launch – scientifically measured by AC Nielsen",
-      imageCaption: "Original photo of the Febreze taxi campaign, Germany 1999",
+      imageCaption: "Original photo of the Febreze taxi campaign, Germany",
       bodyParagraphs: [
         "For the launch of Febreze, Procter & Gamble deliberately chose classic taxi side-door advertising — no special or unusual format.",
         "The goal was to have the effectiveness of this advertising medium scientifically tested under real market conditions. AC Nielsen GmbH was commissioned to measure the results.",
@@ -203,7 +203,7 @@ const en: Dictionary = {
       {
         logoText: "P&G",
         name: "Procter & Gamble – Febreze",
-        campaignImageAlt: "Original photo of the Febreze taxi campaign, Germany 1999",
+        campaignImageAlt: "Original photo of the Febreze taxi campaign, Germany",
         description:
           "For the launch of Febreze, Procter & Gamble chose classic taxi side-door advertising as part of its nationwide market-entry campaign in Germany.",
         facts: [
