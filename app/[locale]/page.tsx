@@ -5,6 +5,7 @@ import { media } from "@/lib/media";
 import ReferencesCarousel from "@/components/ReferencesCarousel";
 import ReferenceClients from "@/components/ReferenceClients";
 import LeadForm from "@/components/LeadForm";
+import MotifRequestButton from "@/components/MotifRequestButton";
 
 export async function generateMetadata({
   params,
@@ -76,9 +77,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
       </section>
 
       {/* Unsere Kunden — directly below the hero, per client's request: all client
-          names large on the dark background, then the Hall of Fame heading, intro
-          and quote cards (moved here from the bottom of the page, not copied).
-          Placeholder quote entries (containing "BENÖTIGT" / "NEEDED") stay hidden. */}
+          names large on the dark background. The Hall of Fame follows as its own section. */}
       <section className="bg-ink border-b border-cream/10">
         <div className="max-w-content mx-auto px-5 md:px-8 py-16 md:py-24">
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-amber">
@@ -94,61 +93,91 @@ export default function HomePage({ params }: { params: { locale: string } }) {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
 
-          {(() => {
-            const isPlaceholder = (s: string) => s.includes("BENÖTIGT") || s.includes("NEEDED");
-            const realQuotes = dict.hallOfFame.quotes.filter((q) => !isPlaceholder(q.quote));
-            const hasMitsubishi = !isPlaceholder(dict.hallOfFame.mitsubishiBody);
-            if (realQuotes.length === 0 && !hasMitsubishi) return null;
+      {/* Hall of Fame — its own premium section directly after the client names.
+          Placeholder entries (containing "BENÖTIGT" / "NEEDED") stay hidden. */}
+      {(() => {
+        const isPlaceholder = (s: string) => s.includes("BENÖTIGT") || s.includes("NEEDED");
+        const realQuotes = dict.hallOfFame.quotes.filter((q) => !isPlaceholder(q.quote));
+        const hasMitsubishi = !isPlaceholder(dict.hallOfFame.mitsubishiBody);
+        if (realQuotes.length === 0 && !hasMitsubishi) return null;
+        const [open, shut] = locale === "de" ? ["\u201E", "\u201C"] : ["\u201C", "\u201D"];
 
-            return (
-              <div className="mt-16 md:mt-20 border-t border-cream/15 pt-12 md:pt-16">
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="inline-flex items-center rounded-full bg-amber/15 border border-amber/40 px-4 py-1.5 text-xs md:text-sm font-bold uppercase tracking-[0.15em] text-amber">
+        return (
+          <section
+            id="hall-of-fame"
+            className="relative overflow-hidden bg-[#0b1426] border-y border-amber/30"
+          >
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -top-32 left-1/2 h-72 w-[120%] -translate-x-1/2 rounded-[50%] bg-amber/10 blur-3xl"
+            />
+            <div className="relative max-w-content mx-auto px-5 md:px-8 py-20 md:py-28">
+              <div className="mx-auto max-w-3xl text-center">
+                <div className="flex flex-wrap items-center justify-center gap-3">
+                  <span className="inline-flex items-center rounded-full bg-amber px-4 py-1.5 text-xs md:text-sm font-extrabold uppercase tracking-[0.2em] text-ink">
                     {dict.hallOfFame.eyebrow}
                   </span>
-                  <span className="inline-flex items-center rounded-full bg-cream/10 border border-cream/25 px-3.5 py-1.5 text-xs font-semibold text-cream/80">
+                  <span className="inline-flex items-center rounded-full border border-amber/40 px-3.5 py-1.5 text-xs font-semibold text-amber">
                     {dict.hallOfFame.periodBadge}
                   </span>
                 </div>
-                <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold text-cream">
+                <h2 className="mt-6 font-display text-3xl md:text-5xl font-extrabold leading-tight text-cream">
                   {dict.hallOfFame.title}
                 </h2>
-                <p className="mt-5 max-w-2xl text-cream/70 leading-relaxed">{dict.hallOfFame.intro}</p>
-
-                {realQuotes.length > 0 && (
-                  <div className="mt-12 grid gap-6 sm:grid-cols-2">
-                    {realQuotes.map((q) => (
-                      <div
-                        key={q.company}
-                        className="rounded-2xl border border-cream/15 bg-white/[0.04] p-6 md:p-8"
-                      >
-                        <p className="font-display text-lg font-bold text-cream">{q.company}</p>
-                        <p className="mt-3 text-lg leading-relaxed text-cream italic">"{q.quote}"</p>
-                        <p className="mt-4 text-sm text-gray-300">{q.author}</p>
-                        <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-amber/70">
-                          {dict.hallOfFame.periodBadge}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {hasMitsubishi && (
-                  <div className="mt-6 rounded-2xl border border-amber/25 bg-amber/[0.06] p-6 md:p-8">
-                    <p className="font-display text-lg font-bold text-cream">
-                      {dict.hallOfFame.mitsubishiHeading}
-                    </p>
-                    <p className="mt-3 text-sm text-cream/70 leading-relaxed">
-                      {dict.hallOfFame.mitsubishiBody}
-                    </p>
-                  </div>
-                )}
+                <p className="mx-auto mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-cream/75">
+                  {dict.hallOfFame.intro}
+                </p>
               </div>
-            );
-          })()}
-        </div>
-      </section>
+
+              {realQuotes.length > 0 && (
+                <div className="mt-14 md:mt-20 grid gap-6 md:gap-8 md:grid-cols-2">
+                  {realQuotes.map((q) => (
+                    <figure
+                      key={q.company}
+                      className="relative flex flex-col overflow-hidden rounded-3xl border border-amber/25 bg-gradient-to-br from-white/[0.09] to-white/[0.02] p-7 sm:p-9 md:p-10 shadow-2xl shadow-black/30"
+                    >
+                      <span
+                        aria-hidden
+                        className="pointer-events-none absolute right-6 top-3 select-none font-display text-[7rem] md:text-[9rem] font-extrabold leading-none text-amber/15"
+                      >
+                        {"\u201C"}
+                      </span>
+                      <figcaption className="relative pr-16 font-display text-xl md:text-2xl font-extrabold uppercase tracking-wide text-amber">
+                        {q.company}
+                      </figcaption>
+                      <span className="relative mt-4 block h-px w-14 bg-amber/60" />
+                      <blockquote className="relative mt-6 grow font-display text-xl md:text-2xl leading-snug text-cream">
+                        {open}
+                        {q.quote}
+                        {shut}
+                      </blockquote>
+                      <p className="relative mt-7 text-sm md:text-base text-gray-300">{q.author}</p>
+                      <p className="relative mt-3 text-[11px] font-semibold uppercase tracking-[0.1em] text-amber/70">
+                        {dict.hallOfFame.periodBadge}
+                      </p>
+                    </figure>
+                  ))}
+                </div>
+              )}
+
+              {hasMitsubishi && (
+                <div className="mt-6 md:mt-8 rounded-3xl border border-amber/40 bg-gradient-to-br from-amber/[0.14] to-amber/[0.04] p-7 sm:p-9 md:p-12 shadow-2xl shadow-black/30">
+                  <p className="font-display text-xl md:text-3xl font-extrabold uppercase tracking-wide text-amber">
+                    {dict.hallOfFame.mitsubishiHeading}
+                  </p>
+                  <span className="mt-4 block h-px w-14 bg-amber/60" />
+                  <p className="mt-6 max-w-3xl text-base md:text-lg leading-relaxed text-cream/85">
+                    {dict.hallOfFame.mitsubishiBody}
+                  </p>
+                </div>
+              )}
+            </div>
+          </section>
+        );
+      })()}
 
       {/* "Making of" — real installation photo, directly below the hero video +
           overlay CTA. This is the proof-of-execution beat: right after the
@@ -537,15 +566,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
             <p className="mt-2 text-sm text-charcoal/70 leading-relaxed">
               {dict.process.motifBoxBody}
             </p>
-            <a
-              href="mailto:info@taxi-werbung.org"
-              className="mt-5 inline-flex items-center gap-2 rounded-full bg-amber px-6 py-3.5 text-sm font-bold text-ink hover:bg-amberDark transition-colors"
-            >
-              {dict.process.motifBoxCta}
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </a>
+            <MotifRequestButton dict={dict} locale={locale} label={dict.process.motifBoxCta} />
           </div>
         </div>
       </section>
