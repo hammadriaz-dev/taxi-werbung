@@ -50,6 +50,7 @@ const de = {
       clientHeading: "Procter & Gamble – Febreze",
       clientSubheading: "Produktlaunch 1999 – wissenschaftlich gemessen von AC Nielsen",
       imageCaption: "Originalfoto der Febreze-Taxiwerbung, Deutschland",
+      imageAlt: "Originalfoto der Febreze-Taxiwerbung, Deutschland: zwei Männer vor einem Taxi mit Febreze-Werbung „Frischer fahren mit Febreze“ und einem Febreze-Infostand",
       bodyParagraphs: [
         "Für den Produktlaunch von Febreze entschied sich Procter & Gamble bewusst für eine klassische Taxiwerbung auf den Seitentüren – keine auffällige Sonderlösung.",
         "Ziel war es, die Wirkung dieses Werbemediums unter realen Marktbedingungen wissenschaftlich überprüfen zu lassen. Mit der Erfolgsmessung wurde die AC Nielsen GmbH beauftragt.",
@@ -98,6 +99,7 @@ const de = {
       clientHeading: "porta Möbel & Mehr",
       clientSubheading: "Großflächige Taxiwerbung in Berlin und Potsdam",
       imageCaption: "Taxiwerbung für porta Möbel & Mehr in Berlin und Potsdam",
+      imageAlt: "porta Möbel & Mehr Taxiwerbung in Berlin: Kombi-Taxi mit blau-weißer Seitenwerbung „Der Möbelgigant in Potsdam“",
       bodyParagraphs: [
         "porta Möbel & Mehr, der Möbelgigant in Potsdam, wirbt seit Jahren erfolgreich mit großflächiger Taxiwerbung in Berlin und Brandenburg – sichtbar im gesamten Stadtgebiet, bei Tag und bei Nacht.",
         "Die zugrunde liegende Verbraucherbefragung wurde im November/Dezember 2016 in Köln durchgeführt, wo porta! ebenfalls mit mehreren Standorten präsent ist. Die Studie der Hochschule Fresenius im Auftrag von Taxi-Werbung.org wurde im Januar 2017 veröffentlicht.",
@@ -201,7 +203,7 @@ const de = {
       {
         logoText: "P&G",
         name: "Procter & Gamble – Febreze",
-        campaignImageAlt: "Originalfoto der Febreze-Taxiwerbung, Deutschland",
+        campaignImageAlt: "Originalfoto der Febreze-Taxiwerbung, Deutschland: zwei Männer vor einem Taxi mit Febreze-Werbung „Frischer fahren mit Febreze“ und einem Febreze-Infostand",
         description:
           "Für den Produktlaunch von Febreze setzte Procter & Gamble auf klassische Taxiwerbung auf den Seitentüren. Die Kampagne lief bundesweit und war Teil der Markteinführungsstrategie für das Produkt in Deutschland.",
         facts: [
@@ -217,7 +219,7 @@ const de = {
       {
         logoText: "porta",
         name: "porta Möbel & Mehr",
-        campaignImageAlt: "Taxiwerbung für porta Möbel & Mehr in Berlin und Potsdam",
+        campaignImageAlt: "porta Möbel & Mehr Taxiwerbung in Berlin: Kombi-Taxi mit blau-weißer Seitenwerbung „Der Möbelgigant in Potsdam“",
         description:
           "porta Möbel & Mehr, der Möbelgigant in Potsdam, wirbt seit Jahren erfolgreich mit großflächiger Taxiwerbung in Berlin und Brandenburg – sichtbar im gesamten Stadtgebiet, bei Tag und bei Nacht.",
         facts: [
@@ -232,8 +234,13 @@ const de = {
       },
     ],
   },
+  videoLabels: {
+    hero: "Taxi mit Taxi-Werbung.org-Beschriftung fährt abends durch Berlin, im Hintergrund der Fernsehturm",
+    showreelDe: "Showreel Taxiwerbung auf Deutsch",
+    showreelEn: "Showreel Taxiwerbung auf Englisch",
+  },
   makingOf: {
-    imageAlt: "Echte Kampagnen-Installation: Taxis werden in der Werkstatt foliert",
+    imageAlt: "Mitarbeiter bekleben in einer Werkstatthalle Taxis mit blau-weißer porta!-Werbefolie",
     imageBadge: "Echte Kampagnen. Echte Sichtbarkeit.",
     eyebrow: "VON DER IDEE AUF DIE STRASSE",
     title: "Wir bringen Ihre Kampagne ins Rollen.",
@@ -370,9 +377,9 @@ const de = {
     title: "Ihre Werbung fährt dort, wo Ihre Kunden sind.",
     body: "Ob Innenstadt, Bahnhof, Flughafen, Messe oder Hotel – Taxis sind täglich mitten im Leben unterwegs. Ihre Marke wird nicht nur gesehen. Sie bewegt sich durch die Stadt, erreicht immer neue Menschen und bleibt im Gedächtnis.",
     tagline: "Machen Sie aus jeder Fahrt eine Werbefahrt.",
-    visual1Alt: "Taxiwerbung am Brandenburger Tor in Berlin",
+    visual1Alt: "Werbebanner „Ihre Werbung fährt durch Deutschland!“: Taxi mit Werbung vor dem Brandenburger Tor in Berlin und Button „Kostenloses Angebot anfordern“",
     visual1Caption: "Sichtbar an den bekanntesten Orten deutscher Großstädte.",
-    visual2Alt: "Das Werbetaxi – Vorteile der Taxiwerbung auf einen Blick",
+    visual2Alt: "Werbebanner „Das Werbetaxi“: Taxi mit buntem Farbklecks-Motiv „Ihre Werbung fährt mit!“ und vier Vorteile der Taxiwerbung",
     visual2Caption: "Deutschlandweite Reichweite für lokale und internationale Kunden.",
     ctaAriaEmail: "Kostenloses Angebot per E-Mail anfordern",
     ctaAriaForm: "Kostenloses Angebot anfordern – zum Kontaktformular",
@@ -410,6 +417,22 @@ const de = {
     featuredBody: "Großflächige Taxi-Türwerbung für das Fitnessstudio Next Door – präsent mitten im Stadtverkehr.",
     featuredBadge: "AKTUELL",
     featuredTags: ["Fitness", "Lokale Sichtbarkeit", "Taxi-Türwerbung"],
+    imageAlts: [
+      "Next Door Fitness: großflächige Türwerbung auf einer Limousine und zwei Großraumtaxis, drei Aufnahmen im Stadtverkehr",
+      "Taxi mit REWE-To-Go-Werbung auf der Seitentür vor dem Essener Hauptbahnhof",
+      "Taxi mit Ay-Yildiz-Werbung: lächelnder Mann und Roaming-Angebot für Anrufe in die Türkei auf der Seitentür",
+      "Taxi mit roter Sparkasse-Nienburg-Werbung auf der Fahrertür mit der Frage „Schneller ans Ziel kommen?“",
+      "porta! Möbel Taxiwerbung in Berlin und Potsdam: zwei Taxis mit blauer Werbung „Der Möbelgigant in Potsdam“",
+      "porta! Möbel Taxiwerbung in Berlin: Kombi-Taxi mit blau-weißer Seitenwerbung „Der Möbelgigant in Potsdam“",
+      "porta! Möbel Taxi bei Nacht mit beleuchtetem Taxidach und blauer porta!-Werbung am Fahrzeug",
+      "Taxi mit Bundeswehr-Personalwerbung „Arbeitgeber Bundeswehr“ an der Tür, im Hintergrund ein Flughafen",
+      "Taxi mit schwarzer Flic-Flac-Werbung: Motocross-Fahrer, flicflac.de und der Hinweis Mönchengladbach",
+      "Umwelt-Taxi mit Erdgas-Werbung „Erdgas macht’s möglich“ vor dem InterContinental Berlin, Kampagne mit Statoil (heute Equinor)",
+      "Mitarbeiter bekleben in einer Werkstatthalle Taxis mit blau-weißer porta!-Werbefolie",
+      "Taxi mit Turkish-Airlines-Kampagne „Düsstanbul“ auf der Tür, davor stehen zwei Männer",
+      "Taxi mit Authentic-Cuba-Werbung: Strandmotiv mit Liegestuhl und Cuba-Logo auf der Seitentür",
+      "Taxi mit Travel-Texas-Werbung: Landschaftsmotiv und Aufruf, den Wilden Westen zu entdecken",
+    ],
     captions: [
       "Einheitlicher Markenauftritt auf Limousine und Großraumtaxi – für hohe Wiedererkennung im täglichen Stadtverkehr.",
       "Kampagne für REWE To Go, gesehen direkt am Essener Hauptbahnhof.",
@@ -438,7 +461,7 @@ const de = {
   about: {
     heading: "Über Uns",
     kicker: "Unser Konzept",
-    heroAlt: "Team von Taxi-Werbung.org bei der Montage einer Taxiwerbekampagne",
+    heroAlt: "Mitarbeiter von Taxi-Werbung.org bekleben in einer Werkstatthalle Taxis mit Werbefolie",
     lead: "Revolutioniert Taxiwerbung.",
     body1:
       "Taxi-Werbung.org begleitet Werbekampagnen von der ersten Idee über Beratung und Konzeption bis zur erfolgreichen Umsetzung.",
@@ -453,7 +476,7 @@ const de = {
   contact: {
     heading: "Kontaktieren Sie uns",
     kicker: "Für Taxiwerbung",
-    heroAlt: "Taxiwerbung auf einem echten Taxi im Straßenverkehr",
+    heroAlt: "Umwelt-Taxi mit Erdgas-Werbung vor dem InterContinental Berlin",
     intro: "Erzählen Sie uns kurz von Ihrem Vorhaben. Wir melden uns mit einem passenden Angebot.",
     form: {
       company: "Firmenname",

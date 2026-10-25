@@ -35,6 +35,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
           className="absolute inset-0 h-full w-full object-cover"
           src={media.heroVideo}
           poster={media.heroVideoPoster}
+          aria-label={dict.videoLabels.hero}
           autoPlay
           muted
           loop
@@ -392,6 +393,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                 <video
                   className="h-full w-full object-cover"
                   src={media.showreelVideoDe}
+                  aria-label={dict.videoLabels.showreelDe}
                   poster={media.showreelPoster}
                   controls
                   playsInline
@@ -407,6 +409,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                 <video
                   className="h-full w-full object-cover"
                   src={media.showreelVideoEn}
+                  aria-label={dict.videoLabels.showreelEn}
                   poster={media.showreelPoster}
                   controls
                   playsInline
@@ -438,7 +441,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
           <div className="relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-3xl">
             <Image
               src={media.references[0].src}
-              alt={dict.references.gridLabels[0]}
+              alt={dict.references.imageAlts[0]}
               fill
               sizes="100vw"
               className="object-cover"
@@ -478,7 +481,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
               <div className="relative w-full aspect-square overflow-hidden rounded-2xl border border-line bg-ink/5">
                 <Image
                   src={ref.src}
-                  alt={dict.references.captions[i] || dict.references.gridLabels[i]}
+                  alt={dict.references.imageAlts[i] || dict.references.gridLabels[i]}
                   fill
                   sizes="(min-width: 768px) 25vw, 50vw"
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -496,6 +499,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
           <ReferencesCarousel
             items={media.references.slice(1)}
             labels={dict.references.gridLabels.slice(1)}
+            alts={dict.references.imageAlts.slice(1)}
             captions={dict.references.captions.slice(1)}
             prevLabel={dict.references.prevLabel}
             nextLabel={dict.references.nextLabel}

@@ -13,12 +13,14 @@ const RESUME_AFTER_MS = 8000;
 export default function ReferencesCarousel({
   items,
   labels,
+  alts,
   captions,
   prevLabel,
   nextLabel,
 }: {
   items: Reference[];
   labels: string[];
+  alts: string[];
   captions: string[];
   prevLabel: string;
   nextLabel: string;
@@ -95,7 +97,7 @@ export default function ReferencesCarousel({
             <div key={ref.src} className="relative h-full w-full shrink-0">
               <Image
                 src={ref.src}
-                alt={labels[i] || ref.name}
+                alt={alts[i] || labels[i] || ref.name}
                 fill
                 sizes="(min-width: 1024px) 900px, 100vw"
                 className="object-contain"

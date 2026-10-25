@@ -52,6 +52,7 @@ const en: Dictionary = {
       clientHeading: "Procter & Gamble – Febreze",
       clientSubheading: "1999 product launch – scientifically measured by AC Nielsen",
       imageCaption: "Original photo of the Febreze taxi campaign, Germany",
+      imageAlt: "Original photo of the Febreze taxi campaign, Germany: two men in front of a taxi with Febreze advertising “Frischer fahren mit Febreze” and a Febreze info stand",
       bodyParagraphs: [
         "For the launch of Febreze, Procter & Gamble deliberately chose classic taxi side-door advertising — no special or unusual format.",
         "The goal was to have the effectiveness of this advertising medium scientifically tested under real market conditions. AC Nielsen GmbH was commissioned to measure the results.",
@@ -100,6 +101,7 @@ const en: Dictionary = {
       clientHeading: "porta Möbel & Mehr",
       clientSubheading: "Large-format taxi advertising in Berlin and Potsdam",
       imageCaption: "Taxi advertising for porta Möbel & Mehr in Berlin and Potsdam",
+      imageAlt: "porta Möbel & Mehr taxi advertising in Berlin: estate taxi with blue and white side advertising “Der Möbelgigant in Potsdam”",
       bodyParagraphs: [
         "porta Möbel & Mehr, the furniture giant in Potsdam, has advertised successfully with large-format taxi campaigns across Berlin and Brandenburg for years — visible citywide, day and night.",
         "The underlying consumer survey was conducted in November/December 2016 in Cologne, where porta! also operates several locations. The Hochschule Fresenius study, commissioned by Taxi-Werbung.org, was published in January 2017.",
@@ -203,7 +205,7 @@ const en: Dictionary = {
       {
         logoText: "P&G",
         name: "Procter & Gamble – Febreze",
-        campaignImageAlt: "Original photo of the Febreze taxi campaign, Germany",
+        campaignImageAlt: "Original photo of the Febreze taxi campaign, Germany: two men in front of a taxi with Febreze advertising “Frischer fahren mit Febreze” and a Febreze info stand",
         description:
           "For the launch of Febreze, Procter & Gamble chose classic taxi side-door advertising as part of its nationwide market-entry campaign in Germany.",
         facts: [
@@ -219,7 +221,7 @@ const en: Dictionary = {
       {
         logoText: "porta",
         name: "porta Möbel & Mehr",
-        campaignImageAlt: "Taxi advertising for porta Möbel & Mehr in Berlin and Potsdam",
+        campaignImageAlt: "porta Möbel & Mehr taxi advertising in Berlin: estate taxi with blue and white side advertising “Der Möbelgigant in Potsdam”",
         description:
           "porta Möbel & Mehr, the furniture giant in Potsdam, has advertised successfully with large-format taxi campaigns across Berlin and Brandenburg for years — visible citywide, day and night.",
         facts: [
@@ -234,8 +236,13 @@ const en: Dictionary = {
       },
     ],
   },
+  videoLabels: {
+    hero: "Taxi with Taxi-Werbung.org lettering driving through Berlin in the evening, TV tower in the background",
+    showreelDe: "Taxi advertising showreel in German",
+    showreelEn: "Taxi advertising showreel in English",
+  },
   makingOf: {
-    imageAlt: "Real campaign installation: taxis being wrapped in the workshop",
+    imageAlt: "Staff applying blue and white porta! advertising film to taxis in a workshop hall",
     imageBadge: "Real campaigns. Real visibility.",
     eyebrow: "FROM IDEA TO THE STREET",
     title: "We get your campaign rolling.",
@@ -372,9 +379,9 @@ const en: Dictionary = {
     title: "Your advertising travels where your customers are.",
     body: "Whether downtown, at the station, the airport, a trade fair or a hotel — taxis are out in the middle of everyday life, every day. Your brand isn't just seen. It moves through the city, reaches new people again and again, and stays memorable.",
     tagline: "Turn every ride into an advertising ride.",
-    visual1Alt: "Taxi advertising at the Brandenburg Gate in Berlin",
+    visual1Alt: "Advertising banner “Ihre Werbung fährt durch Deutschland!”: taxi with advertising in front of the Brandenburg Gate in Berlin and a “Get your free quote” button",
     visual1Caption: "Visible at the most iconic locations in German cities.",
-    visual2Alt: "The advertising taxi – the benefits of taxi advertising at a glance",
+    visual2Alt: "Advertising banner “Das Werbetaxi”: taxi with colourful paint-splash design “Ihre Werbung fährt mit!” and four benefits of taxi advertising",
     visual2Caption: "Nationwide reach for local and international clients.",
     ctaAriaEmail: "Request a free quote by email",
     ctaAriaForm: "Request a free quote — go to contact form",
@@ -412,6 +419,22 @@ const en: Dictionary = {
     featuredBody: "Large-format taxi side-door advertising for the Next Door fitness studio — present right in the middle of city traffic.",
     featuredBadge: "CURRENT",
     featuredTags: ["Fitness", "Local Visibility", "Taxi Side-Door Advertising"],
+    imageAlts: [
+      "Next Door Fitness large-scale door advertising on a sedan and two minivan taxis, three shots in city traffic",
+      "Taxi with REWE To Go advertising on the side door in front of Essen main station",
+      "Taxi with Ay Yildiz advertising: smiling man and a roaming offer for calls to Turkey on the side door",
+      "Taxi with red Sparkasse Nienburg advertising on the driver’s door asking “Schneller ans Ziel kommen?”",
+      "porta! Möbel taxi advertising in Berlin and Potsdam: two taxis with blue advertising “Der Möbelgigant in Potsdam”",
+      "porta! Möbel taxi advertising in Berlin: estate taxi with blue and white side advertising “Der Möbelgigant in Potsdam”",
+      "porta! Möbel taxi at night with illuminated roof sign and blue porta! advertising on the vehicle",
+      "Taxi with Bundeswehr recruitment advertising “Arbeitgeber Bundeswehr” on the door, airport in the background",
+      "Taxi with black Flic Flac advertising: motocross rider, flicflac.de and the note Mönchengladbach",
+      "Umwelt-Taxi with natural gas advertising “Erdgas macht’s möglich” in front of the InterContinental Berlin, campaign with Statoil (now Equinor)",
+      "Staff applying blue and white porta! advertising film to taxis in a workshop hall",
+      "Taxi with Turkish Airlines campaign “Düsstanbul” on the door, two men standing in front of it",
+      "Taxi with Authentic Cuba advertising: beach motif with a deck chair and Cuba logo on the side door",
+      "Taxi with Travel Texas advertising: landscape motif inviting people to discover the Wild West",
+    ],
     captions: [
       "Consistent branding across saloon and multi-purpose taxis for strong recognition in everyday urban traffic.",
       "Campaign for REWE To Go, seen right at Essen's main railway station.",
@@ -440,7 +463,7 @@ const en: Dictionary = {
   about: {
     heading: "About Us",
     kicker: "Our Concept",
-    heroAlt: "Taxi-Werbung.org team installing a taxi advertising campaign",
+    heroAlt: "Taxi-Werbung.org staff applying advertising film to taxis in a workshop hall",
     lead: "Revolutionizing taxi advertising.",
     body1:
       "Taxi-Werbung.org supports advertising campaigns from the first idea through consulting and concept development to successful execution.",
@@ -455,7 +478,7 @@ const en: Dictionary = {
   contact: {
     heading: "Contact Us",
     kicker: "For taxi advertising",
-    heroAlt: "Taxi advertising on a real taxi in city traffic",
+    heroAlt: "Umwelt-Taxi with natural gas advertising in front of the InterContinental Berlin",
     intro: "Tell us a little about your project. We'll get back to you with a tailored quote.",
     form: {
       company: "Company name",
